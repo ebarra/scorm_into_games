@@ -7228,3 +7228,12 @@ ActionController::RoutingError (No route matches [GET] "/games/templates/js/run_
 
 
   Rendered /home/aldo/.rvm/gems/ruby-1.9.3-p194@scorm/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
