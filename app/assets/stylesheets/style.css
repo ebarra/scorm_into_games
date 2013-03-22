@@ -1,0 +1,209 @@
+/** Remove outlines (Bootstrap fix for all browsers, specially Firefox) **/
+* {
+    outline: none;
+}
+
+a, a:focus {
+   outline: none;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+
+/*
+ * SGAME CSS
+ */
+
+body {
+  background: #046598;
+  color: white;
+  font-family: Helvetica, Serif;
+  overflow: hidden;
+}
+
+.header{
+  width: 100%;
+  height: 90px;
+  margin-top: 20px;
+}
+
+.logo_wrapper{
+  margin-left: 10%;
+  width: 15%;
+  float: left;
+}
+
+img.logo {
+  width: 100%;
+}
+
+.description_wrapper{
+  margin-left: 8%;
+  margin-right: 8%;
+  width: 30%;
+  float: left;
+}
+
+.description{
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.gallery_wrapper{
+  width: 15%;
+  float: left;
+}
+
+.gallery{
+  /*width: 100%;*/
+}
+
+.tool {
+  width: 1400px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 10px;
+  height: 637px;
+}
+
+.game {
+  width: 540px;
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.content {
+  background: blue;
+  width: 540px;
+  height: 100%;
+  float: left;
+}
+
+.carrousel_title{
+  width: 100%;
+  background: black;
+}
+
+.carrousel_title_text{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+}
+
+.plus{
+  position: absolute;
+  top: 443px;
+  left: 626px;
+}
+
+.carrousel_wrapper{
+  height: 160px;
+}
+
+.data{
+  margin-top: 15px;
+  height: 300px;
+}
+
+.game {
+  text-align: center;
+  background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1a000000',GradientType=1 ); /* IE6-9 */
+}
+
+.content {
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(0,0,0,0.1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(0,0,0,0.1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+#game_preview{
+  min-width: 400px;
+  min-height: 300px;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+#game_description{
+  padding: 5px;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+
+ul#lo_list {
+  list-style-type: none;
+}
+
+ul#lo_list li {
+    display: block;
+    min-height: 100px;
+    margin-top: 30px;
+}
+
+
+.lo_preview_wrapper{
+  float:left;
+}
+
+.lo_preview{
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.lo_description_wrapper{
+  float:left;
+  max-width: 350px;
+  padding:5px;
+  vertical-align: middle;
+}
+
+.lo_description{
+  padding: 5px;
+  padding-top: 10px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.remove_wrapper{
+  float:left;
+  max-width: 25px;
+}
+
+.remove{
+  min-width: 30px;
+  margin-top: 20px;
+}
+
+.create{
+  width: 100px;
+  height: 30px;
+  background: #046598;
+  position: absolute;
+  top: 710px;
+  left: 591px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  border: 3px solid white;
+}
+
+.create > p {
+  margin-top: 5px;
+}
