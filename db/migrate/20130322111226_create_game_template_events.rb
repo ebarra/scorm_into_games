@@ -4,7 +4,7 @@ class CreateGameTemplateEvents < ActiveRecord::Migration
       t.integer :game_template_id
       t.string :name
       t.string :description
-      t.string :type
+      t.string :event_type
       t.timestamps
     end
   end
