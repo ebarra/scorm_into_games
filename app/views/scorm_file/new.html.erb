@@ -1,10 +1,4 @@
 <%= form_for(:scorm_file, :html => {:multipart => true}, :url => "/scorm_file") do |f| %>
-  <label class="text_label" for="name">
-    <%= f.label "Name" %>
-  </label>
-  <div class="">
-      <%= f.text_field :name, :class => "" %>
-  </div>
   <label class="text_label" for="description">
     <%= f.label "Description" %>
   </label>

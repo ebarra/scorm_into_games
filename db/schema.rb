@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(:version => 20130323114536) do
 
   create_table "los", :force => true do |t|
     t.integer  "scorm_file_id"
+    t.string   "type"
+    t.string   "scorm_type"
+    t.string   "href"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -57,9 +60,8 @@ ActiveRecord::Schema.define(:version => 20130323114536) do
     t.string   "name"
     t.string   "description"
     t.string   "avatar_url"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-    t.string   "sourcer_content_type"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "source_file_name"
     t.string   "source_content_type"
     t.integer  "source_file_size"
