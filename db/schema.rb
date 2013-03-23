@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20130323114536) do
 
   create_table "los", :force => true do |t|
     t.integer  "scorm_file_id"
-    t.string   "type"
+    t.string   "lo_type"
     t.string   "scorm_type"
     t.string   "href"
     t.datetime "created_at",    :null => false

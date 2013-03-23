@@ -16,19 +16,13 @@ class ScormFile < ActiveRecord::Base
 	   # Read stuff from the package...
 	   name = pkg.manifest.default_organization.title
 	   pkg.manifest.resources.each do |resource|
-	   	 # lo = Lo.new
-	   	 # lo.type = resource.type
-	   	 # lo.scorm_type = resource.scorm_type
-	   	 # lo.href = resource.href
-	   	 # los << lo
-	   	 puts resource.href
-	     puts resource.scorm_type
-	     if pkg.exists?(resource.files.first)
-	       puts resource.files.first
-	       puts pkg.file(resource.files.first)
-	     end
+	   	 lo = Lo.new
+	   	 lo.lo_type = resource.type
+	   	 lo.scorm_type = resource.scorm_type
+	   	 lo.href = resource.href
+	   	 lo.scorm_file = self
+	   	 lo.save	   	 
 	   end
 	end
-	save
   end
 end
