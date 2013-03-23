@@ -1,0 +1,14 @@
+red: puf
+clave: enriqueybea
+
+para acceder al router:
+
+usuario: vodafone
+pass: enriqueybea
+
+ANTIGUA DE ORANGE:
+CD5E6757C3F93257ED5A3E65F9
+
+TOLEDO:
+WLAN_E94C
+LA4M80KXUQYJ34JZFL1E

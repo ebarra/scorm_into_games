@@ -23124,3 +23124,1702 @@ Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:11:23 +0100
 Processing by ScormFileController#new as */*
   Rendered scorm_file/new.html.erb (2.3ms)
 Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:15:01 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (2.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Compiled style.css  (0ms)  (pid 4427)
+Compiled application.css  (2ms)  (pid 4427)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /carrousel.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /bootstrap.js - 200 OK (82ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /sgame.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /game_dpark.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:15:47 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:15:48 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:15:48 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (2.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:15:48 +0100
+Served asset /fancybox/fancybox.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:15:48 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:15:48 +0100
+Served asset /fancybox/blank.gif - 200 OK (0ms)
+
+
+Started POST "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:16:27 +0100
+
+ActionController::RoutingError (No route matches [POST] "/scorm_file/new"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:18:37 +0100
+Connecting to database specified by database.yml
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 157ms (Views: 156.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /application.css - 200 OK (19ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /bootstrap.css - 200 OK (7ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (4ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /carrousel.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /CarrouselWrapper.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /bootstrap.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /bootstrap-modal.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (11ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (5ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /sgame.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /logo.png - 200 OK (2ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /gallery_icon.png - 200 OK (2ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:18:38 +0100
+Served asset /plus.png - 200 OK (6ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /add_game.png - 200 OK (20ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /game_dpark.png - 200 OK (4ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /SGAME.jpg - 200 OK (3ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /game_sokoban.png - 200 OK (3ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /add_lo.png - 200 OK (2ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /scorm_golf1.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (3ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /scorm_nano.png - 200 OK (5ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /scorm_maths.png - 200 OK (2ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:18:39 +0100
+Served asset /carrousel_sprite.png - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:23:41 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /sgame.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:23:42 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:23:43 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (8.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:23:43 +0100
+Served asset /fancybox/fancybox.png - 200 OK (2ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:23:43 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (5ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:23:43 +0100
+Served asset /fancybox/blank.gif - 200 OK (2ms)
+
+
+Started POST "/scorm_file/create" for 127.0.0.1 at 2013-03-23 13:23:48 +0100
+
+ActionController::RoutingError (No route matches [POST] "/scorm_file/create"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /logo.png - 200 OK (7ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /game_dpark.png - 200 OK (2ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /scorm_golf1.jpg - 200 OK (2ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (4ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:31:30 +0100
+Served asset /scorm_nano.png - 200 OK (12ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:31:31 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:31:31 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:31:31 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /CarrouselWrapper.js - 200 OK (9ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /sgame.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /scorm_maths.png - 200 OK (4ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:31:32 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:31:33 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:31:33 +0100
+Served asset /fancybox/fancybox.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:31:33 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:31:33 +0100
+Served asset /fancybox/blank.gif - 200 OK (0ms)
+
+
+Started POST "/scorm_file/create" for 127.0.0.1 at 2013-03-23 13:31:37 +0100
+
+ActionController::RoutingError (No route matches [POST] "/scorm_file/create"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /style.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:49 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /add_game.png - 200 OK (2ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:32:50 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /bootstrap.css - 200 OK (2ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /game_dpark.png - 200 OK (10ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /add_lo.png - 200 OK (3ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /SGAME.jpg - 200 OK (3ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:32:51 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /bootstrap.css - 200 OK (5ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /gallery_icon.png - 200 OK (2ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /game_dpark.png - 200 OK (4ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:33:29 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:33:30 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (2.8ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:33:30 +0100
+Served asset /fancybox/fancybox.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:33:30 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:33:30 +0100
+Served asset /fancybox/blank.gif - 200 OK (0ms)
+
+
+Started POST "/scorm_file" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Processing by ScormFileController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JY5m4eZxCgIbMOFj9WogxVD8tcmTfLjP24q9k//mu8I=", "scorm_file"=>{"name"=>"f", "description"=>"f", "source"=>#<ActionDispatch::Http::UploadedFile:0x9b42478 @original_filename="clave wifi.txt.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"scorm_file[source]\"; filename=\"clave wifi.txt.txt\"\r\nContent-Type: text/plain\r\n", @tempfile=#<File:/tmp/RackMultipart20130323-27960-1ivnnjv>>}, "commit"=>"Upload"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `source_content_type`
+  [1m[35mSQL (14.0ms)[0m  INSERT INTO "scorm_files" ("avatar_url", "created_at", "description", "name", "source_content_type", "source_file_name", "source_file_size", "source_updated_at", "sourcer_content_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_url", nil], ["created_at", Sat, 23 Mar 2013 12:33:35 UTC +00:00], ["description", "f"], ["name", "f"], ["source_content_type", "text/plain"], ["source_file_name", "clave_wifi.txt.txt"], ["source_file_size", 189], ["source_updated_at", Sat, 23 Mar 2013 12:33:35 UTC +00:00], ["sourcer_content_type", nil], ["updated_at", Sat, 23 Mar 2013 12:33:35 UTC +00:00]]
+[paperclip] Saving attachments.
+  [1m[36m (136.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 150.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /application.css - 200 OK (18ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (1ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /add_lo.png - 200 OK (2ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:33:35 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:33:36 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /bootstrap.css - 200 OK (2ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /add_game.png - 200 OK (2ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /SGAME.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:54:41 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:54:42 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:54:43 +0100
+
+LoadError (no such file to load -- scorm/package):
+  app/models/scorm_file.rb:1:in `<top (required)>'
+  app/controllers/scorm_file_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:54:43 +0100
+Served asset /fancybox/fancybox.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:54:43 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:54:43 +0100
+Served asset /fancybox/blank.gif - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_hover.png" for 127.0.0.1 at 2013-03-23 13:55:05 +0100
+Served asset /fancybox/delete_hover.png - 200 OK (27ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /sgame.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:01 +0100
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /game_sokoban.png - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /add_lo.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (1ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /scorm_nano.png - 200 OK (3ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:57:02 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (3.1ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fancybox/fancybox.png" for 127.0.0.1 at 2013-03-23 13:57:03 +0100
+Served asset /fancybox/fancybox.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/delete_slide.png" for 127.0.0.1 at 2013-03-23 13:57:03 +0100
+Served asset /fancybox/delete_slide.png - 200 OK (0ms)
+
+
+Started GET "/assets/fancybox/blank.gif" for 127.0.0.1 at 2013-03-23 13:57:03 +0100
+Served asset /fancybox/blank.gif - 200 OK (0ms)
+
+
+Started POST "/scorm_file" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Processing by ScormFileController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JY5m4eZxCgIbMOFj9WogxVD8tcmTfLjP24q9k//mu8I=", "scorm_file"=>{"name"=>"d", "description"=>"d", "avatar_url"=>"fdf", "source"=>#<ActionDispatch::Http::UploadedFile:0xa373264 @original_filename="golf_one_sco.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"scorm_file[source]\"; filename=\"golf_one_sco.zip\"\r\nContent-Type: application/zip\r\n", @tempfile=#<File:/tmp/RackMultipart20130323-27960-13alt4e>>}, "commit"=>"Upload"}
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `source_content_type`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "scorm_files" ("avatar_url", "created_at", "description", "name", "source_content_type", "source_file_name", "source_file_size", "source_updated_at", "sourcer_content_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_url", "fdf"], ["created_at", Sat, 23 Mar 2013 12:57:20 UTC +00:00], ["description", "d"], ["name", "d"], ["source_content_type", "application/zip"], ["source_file_name", "golf_one_sco.zip"], ["source_file_size", 423119], ["source_updated_at", Sat, 23 Mar 2013 12:57:20 UTC +00:00], ["sourcer_content_type", nil], ["updated_at", Sat, 23 Mar 2013 12:57:20 UTC +00:00]]
+[paperclip] Saving attachments.
+  [1m[35m (258.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 286ms (ActiveRecord: 259.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /carrousel.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery-1.7.2.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /CarrouselWrapper.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 200 OK (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /sgame.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:57:20 +0100
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /gallery_icon.png - 200 OK (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /plus.png - 200 OK (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /add_game.png - 200 OK (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /game_OnslaughtArena.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /SGAME.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /game_sokoban.png - 200 OK (1ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /add_lo.png - 200 OK (13ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /scorm_nano.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /scorm_iberianLynx.png - 200 OK (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /scorm_golf1.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /game_dpark.png - 200 OK (1ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /scorm_maths.png - 200 OK (0ms)
+
+
+Started GET "/assets/carrousel_sprite.png" for 127.0.0.1 at 2013-03-23 13:57:21 +0100
+Served asset /carrousel_sprite.png - 200 OK (0ms)

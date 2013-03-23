@@ -207,3 +207,7 @@ ul#lo_list li {
 .create > p {
   margin-top: 5px;
 }
+
+#fancybox-content{
+  background: #046598;
+}

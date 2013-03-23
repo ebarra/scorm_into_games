@@ -62,6 +62,6 @@ Demo::Application.routes.draw do
   resources :scorm_file
   resources :game
   resources :game_template
-  match '/', :controller => 'game', :action => 'new' 
+  root :to => 'game#new'
 
 end
