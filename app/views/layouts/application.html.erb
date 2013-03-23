@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Demo</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>SGAME</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+  </head>
+  <body>
+  	<div class="header">
+		<div class="logo_wrapper">
+		  <img src="/assets/logo.png" class="logo" />
+		</div>
+		<div class="description_wrapper">
+		    <p class="description">SGAME allows you to integrate any SCORM package into a web game. Select a game, an scorm package and create your own educational game.</p>
+		</div>
+		<div class="gallery_wrapper">
+		  <img src="/assets/gallery_icon.png" class="gallery" />
+		</div>
+	</div>
+	
+    <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>

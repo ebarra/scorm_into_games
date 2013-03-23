@@ -10,14 +10,28 @@ SGAME = (function($,undefined){
 	var lo_carrousel_id = "lo_carrousel";
 
 	var init = function (){
+		_createFancybox();
 		_requestData(_createCarrousels);
 		_loadEvents();
 	}
 
+	var _createFancybox = function(){
+		$("#upload_scorm").fancybox({
+			'autoDimensions' : false,
+			'scrolling': 'no',
+			'width': 800,
+			'height': 660,
+			'padding': 0,
+			'hideOnOverlayClick': false,
+			'hideOnContentClick': false,
+			'showCloseButton': true
+		});
+	};
+
 	var _createCarrousels = function(data){
 		_createGameCarrousel(data.games);
 		_createLOCarrousel(data.los);
-	}
+	};
 
 	var _createGameCarrousel = function(games){
 		var carrouselImages = [];
@@ -206,6 +220,9 @@ SGAME = (function($,undefined){
 
 	var _triggerFacyboxToUploadNewLO = function(game){
 		console.log("New LO");
+		$("#upload_scorm").click();
+
+
 	}
 
 	var _addLO = function(lo){

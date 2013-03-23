@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130322120554) do
+ActiveRecord::Schema.define(:version => 20130323114536) do
 
   create_table "event_mappings", :force => true do |t|
     t.integer  "game_template_event_id"
@@ -57,8 +57,13 @@ ActiveRecord::Schema.define(:version => 20130322120554) do
     t.string   "name"
     t.string   "description"
     t.string   "avatar_url"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "sourcer_content_type"
+    t.string   "source_file_name"
+    t.string   "source_content_type"
+    t.integer  "source_file_size"
+    t.datetime "source_updated_at"
   end
 
 end

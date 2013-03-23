@@ -1,0 +1,22 @@
+<%= form_for(@scorm_file, :html => {:multipart => true}) do |f| %>
+  <label class="text_label" for="name">
+    <%= f.label "Name" %>
+  </label>
+  <div class="">
+      <%= f.text_field :name, :class => "" %>
+  </div>
+  <label class="text_label" for="description">
+    <%= f.label "Description" %>
+  </label>
+  <div class="">
+    <%= f.text_area :description, :class => "", :rows => 5 %>
+  </div>
+
+  <label class="text_label" for="source">
+    <%= f.label "Scorm File" %>
+  </label>
+  <%= f.file_field :source %>
+
+
+  <%= f.submit "Upload", :class => "btn", :id => "upload_scorm_button" %>
+<%end%>

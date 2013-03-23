@@ -58,4 +58,10 @@ Demo::Application.routes.draw do
 
   match "games/templates/oarena" => redirect("games/templates/oarena/")
 
+
+  resources :scorm_file
+  resources :game
+  resources :game_template
+  match '/', :controller => 'game', :action => 'new' 
+
 end
