@@ -22555,3 +22555,572 @@ ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
   Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
   Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /carrousel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery-1.7.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /CarrouselWrapper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /sgame.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /gallery_icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /add_game.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /game_dpark.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /game_OnslaughtArena.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /plus.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /SGAME.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /game_sokoban.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /add_lo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /scorm_golf1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /scorm_nano.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /scorm_maths.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:00:42 +0100
+Served asset /scorm_iberianLynx.png - 304 Not Modified (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:00:43 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (12.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `scorm_file' for #<#<Class:0xbef9998>:0xb71e7b04>):
+    1: <%= form_for(scorm_file, :html => {:multipart => true}) do |f| %>
+    2:   <label class="text_label" for="name">
+    3:     <%= f.label "Name" %>
+    4:   </label>
+  app/views/scorm_file/new.html.erb:1:in `_app_views_scorm_file_new_html_erb__1013940334__611370678'
+  app/controllers/scorm_file_controller.rb:5:in `block (2 levels) in new'
+  app/controllers/scorm_file_controller.rb:4:in `new'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /carrousel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /CarrouselWrapper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery-1.7.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /sgame.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:02:09 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /gallery_icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /plus.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /game_OnslaughtArena.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /add_game.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /game_dpark.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /add_lo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /game_sokoban.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /SGAME.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /scorm_golf1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /scorm_nano.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /scorm_iberianLynx.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Served asset /scorm_maths.png - 304 Not Modified (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:02:10 +0100
+Processing by ScormFileController#new as */*
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `new!' for #<ScormFileController:0xb639650>):
+  app/controllers/scorm_file_controller.rb:4:in `new'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/assets/fancybox/delete_hover.png" for 127.0.0.1 at 2013-03-23 13:08:42 +0100
+Served asset /fancybox/delete_hover.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /carrousel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery-1.7.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /CarrouselWrapper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /sgame.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:08:59 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /gallery_icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /add_game.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /game_dpark.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /plus.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /SGAME.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /game_OnslaughtArena.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /game_sokoban.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /add_lo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /scorm_golf1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /scorm_iberianLynx.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /scorm_nano.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Served asset /scorm_maths.png - 304 Not Modified (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:09:00 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (11.1ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `scorm_file' for #<#<Class:0xbe9991c>:0xbe97f90>):
+    1: <%= form_for(scorm_file, :html => {:multipart => true}) do |f| %>
+    2:   <label class="text_label" for="name">
+    3:     <%= f.label "Name" %>
+    4:   </label>
+  app/views/scorm_file/new.html.erb:1:in `_app_views_scorm_file_new_html_erb__1013940334__611370678'
+  app/controllers/scorm_file_controller.rb:5:in `block (2 levels) in new'
+  app/controllers/scorm_file_controller.rb:4:in `new'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Processing by GameController#new as HTML
+  Rendered game/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carrousel.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /carrousel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.9.2.custom.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /jquery-ui-1.9.2.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /jquery-1.7.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/CarrouselWrapper.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /CarrouselWrapper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:14 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.carouFredSel-6.2.0-packed.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /jquery.carouFredSel-6.2.0-packed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mousewheel-3.0.4.pack.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /jquery.mousewheel-3.0.4.pack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sgame.js?body=1" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /sgame.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_icon.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /gallery_icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plus.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /plus.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_game.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /add_game.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SGAME.jpg" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /SGAME.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_OnslaughtArena.jpg" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /game_OnslaughtArena.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_dpark.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /game_dpark.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_sokoban.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /game_sokoban.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_lo.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /add_lo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_nano.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /scorm_nano.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_maths.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /scorm_maths.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_iberianLynx.png" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /scorm_iberianLynx.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scorm_golf1.jpg" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Served asset /scorm_golf1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:11:15 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (66.1ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:11:19 +0100
+
+ActionController::RoutingError (No route matches [POST] "/scorm_file/new"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ebarra/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ebarra/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/scorm_file/new" for 127.0.0.1 at 2013-03-23 13:11:23 +0100
+Processing by ScormFileController#new as */*
+  Rendered scorm_file/new.html.erb (2.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
