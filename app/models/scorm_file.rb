@@ -22,6 +22,7 @@ class ScormFile < ActiveRecord::Base
 	   	 lo.href = resource.href
 	   	 lo.scorm_file = self
 	   	 lo.save	   	 
+	   	 #TODO salvar solo los que sean sco. o mejor los que estén dentro de organization
 	   end
 	end
   end
