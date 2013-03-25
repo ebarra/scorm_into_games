@@ -20,8 +20,8 @@ SGAME_WEB = (function($,undefined){
 		$("#upload_scorm").fancybox({
 			'autoDimensions' : false,
 			'scrolling': 'no',
-			'width': 800,
-			'height': 660,
+			'width': 600,
+			'height': 400,
 			'padding': 0,
 			'hideOnOverlayClick': false,
 			'hideOnContentClick': false,
@@ -41,7 +41,7 @@ SGAME_WEB = (function($,undefined){
 		// carrouselImages.push($("<img src='assets/game_OnslaughtArena.jpg'/>")[0]);
 		// carrouselImages.push($("<img src='assets/game_sokoban.png'/>")[0]);
 		$.each(games, function(i, game) {
-			var myImg = $("<img itemId="+game.id+" src="+game.avatar+" />");
+			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
 			catalog.games[game.id] = game;
 		});
@@ -117,53 +117,22 @@ SGAME_WEB = (function($,undefined){
 	};
 
 	var _requestGameTemplates = function(successCallback,failCallback){
-		// $.ajax({
-		// 	async: false,
-		// 	type: 'GET',
-		// 	url: '/game_templates.json',
-		// 	dataType: 'json',
-		// 	success: function(data) {
-		// 		if(typeof successCallback == "function"){
-		// 			successCallback(data.templates);
-		// 		}
-		// 	},
-		// 	error: function(xhr, ajaxOptions, thrownError){
-		// 		if(typeof failCallback == "function"){
-		// 			failCallback(xhr, ajaxOptions, thrownError);
-		// 		}
-		// 	}
-		// });
-		var data = {
-			"templates":[
-				{
-					"id":"1",
-					"name": "Onslaught Arena",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/game_OnslaughtArena.jpg",
-				},
-				{
-					"id":"2",
-					"name": "Doñana Park",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/game_dpark.png",
-				},
-				{
-					"id":"3",
-					"name": "SGAME Example",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/SGAME.jpg",
-				},
-				{
-					"id":"4",
-					"name": "Sokoban",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/game_sokoban.png",
+		$.ajax({
+			async: false,
+			type: 'GET',
+			url: '/game_template.json',
+			dataType: 'json',
+			success: function(data) {
+				if(typeof successCallback == "function"){
+					successCallback(data);
 				}
-			]
-		};
-		if(typeof successCallback == "function"){
-			successCallback(data.templates);
-		}
+			},
+			error: function(xhr, ajaxOptions, thrownError){
+				if(typeof failCallback == "function"){
+					failCallback(xhr, ajaxOptions, thrownError);
+				}
+			}
+		});
 	}
 
 			 
@@ -204,7 +173,7 @@ SGAME_WEB = (function($,undefined){
 
 	var _previewGame = function(game){
 		current_game = game;
-		$("#game_preview").attr("src",game.avatar);
+		$("#game_preview").attr("src",game.avatar_url);
 		$("#game_description").html(game.description);
 	}
 

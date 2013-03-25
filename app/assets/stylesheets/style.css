@@ -211,3 +211,16 @@ ul#lo_list li {
 #fancybox-content{
   background: #046598;
 }
+
+#form_scorm_title{
+  font-size: 30px;
+  margin: 30px;
+}
+
+#form_scorm{
+  margin-left: 30px;
+}
+
+#form_scorm label{
+  font-size: 15px;
+}

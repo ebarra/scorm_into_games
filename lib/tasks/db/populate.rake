@@ -21,9 +21,18 @@ namespace :db do
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/2/hiddencraft.zip'))
 
     
+	#now three game templates
+	gt = GameTemplate.create! 	:name=>"Onslaught Arena", 
+								:description=>"Battle hordes of classic medieval monsters in this fast-paced arcade shooter", 
+								:avatar_url=>"/assets/game_OnslaughtArena.jpg"
 
-	gt = GameTemplate.create :name=>"Mario", :description=>"Game example", :avatar_url=>"http://t2.gstatic.com/images?q=tbn:ANd9GcSSBLq0UP6o9Z-WXXDch-lgX3kgX51ivUqp16exYZcD-NGdpSX3Rw"
-	gt.save!
+	gt = GameTemplate.create! 	:name=>"Natural Park", 
+								:description=>"Go meet and feed the lynxes in this park.", 
+								:avatar_url=>"/assets/game_dpark.png"
+
+	gt = GameTemplate.create! 	:name=>"Sokoban", 
+								:description=>"Sokoban is a type of transport puzzle, in which the player pushes diamonds around in a warehouse", 
+								:avatar_url=>"/assets/game_sokoban.png"
 
 	gte = GameTemplateEvent.create :name=>"Extra life", :description=>"Event triggered when the player died", :event_type=>"extra_file", :game_template_id=>GameTemplate.first.id
 	gte.save!
