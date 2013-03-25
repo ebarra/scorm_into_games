@@ -1,1 +1,23 @@
-<p> Show </p>
+<html>
+<head>
+	<script src="/assets/application.js"></script>
+</head>
+<body>
+<p><%=@game.name%></p>
+
+<script>
+	var settings = JSON.parse('<%=@settings.to_json.html_safe%>');
+
+	$(document).ready(function(){
+		$("#game").load(function(){
+			if((typeof window.frames.game.SGAME === "object")&&
+				(typeof window.frames.game.SGAME.init === "function")){
+					window.frames.game.SGAME.init(settings);
+			};
+		});
+	});
+</script>
+
+<iframe id="game" src='<%=@template_url%>' width="100%"; height="800px"></iframe>
+
+</body>

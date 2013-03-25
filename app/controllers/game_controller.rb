@@ -12,4 +12,14 @@ class GameController < ApplicationController
     end
   end
 
+  def show
+    @game = Game.find_by_id(params[:id])
+    @settings = @game.settings
+    @template_url = @game.game_template.get_url
+    respond_to do |format|
+      format.html { render :layout => false } # show.html.erb
+      format.json { render :json => @settings }
+    end
+  end
+
 end

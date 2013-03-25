@@ -16,7 +16,7 @@ namespace :db do
 	gte = GameTemplateEvent.create :name=>"Extra life", :description=>"Event triggered when the player died", :event_type=>"extra_file", :game_template_id=>GameTemplate.first.id
 	gte.save!
 
-	g = Game.create :name=>"My instance of Mario game", :description=>"Game instance example", :avatar_url=>"http://www.example.com", :game_template_id=>GameTemplate.first.id
+	g = Game.create :name=>"My instance of Mario game", :description=>"Game instance example", :avatar_url=>"http://t2.gstatic.com/images?q=tbn:ANd9GcSSBLq0UP6o9Z-WXXDch-lgX3kgX51ivUqp16exYZcD-NGdpSX3Rw", :game_template_id=>GameTemplate.first.id
 	g.save!
 
 	em = EventMapping.create :game_id => Game.first.id, :game_template_event_id => GameTemplateEvent.first.id, :lo_id => Lo.first.id

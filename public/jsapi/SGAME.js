@@ -5,20 +5,31 @@
  * @module SGAME
  */
 
-window.onload = function(){
-	SGAME.init();
-};
-
 SGAME = (function(undefined){
 	
-	var init = function(options) {
+	var _settings;
+	var event_mapping = {};
+
+	var init = function(settings) {
+		console.log("SGAME init with settings ");
+		console.log(settings);
+
+		_settings = settings;
 		
+		if(settings.event_mapping){
+			for(var i=0;i<settings.event_mapping.length;i++){
+				event_mapping[settings.event_mapping[i].event_id] = settings.event_mapping[i].lo_id;
+			}
+		}
 	};
 
 	var triggerLO = function(event_id,callback){
-		var lo;
+		var los_candidate = event_mapping[event_id];
 		//TODO: Select lo in function of event_id
-		_renderLO(lo,callback);
+		if(los_candidate){
+			var loId = _randomChoice(los_candidate);
+			_renderLO(loId,callback);
+		}
 	};
 
 	/*
@@ -35,7 +46,7 @@ SGAME = (function(undefined){
 	};
 
 	var _showLO = function(options,callback){
-		var lo;
+		var loId;
 		if(typeof options == "object"){
 			if(options["lo_id"]){
 				//TODO: get lo with this id
@@ -43,14 +54,24 @@ SGAME = (function(undefined){
 				//[...]
 			}
 		}
-		_renderLO(lo,callback);
+		_renderLO(loId,callback);
 	};
 
-	var _renderLO = function(lo,callback){
+	var _renderLO = function(loId,callback){
 		//TODO: render LO
 		var result = confirm('¿Quieres consumir este LO?');
 		if(typeof callback == "function"){
 			callback(result);
+		}
+	}
+
+	//Utils
+	var _randomChoice = function(box){
+		if(typeof box == "number"){
+			return box; //one single element
+		} else {
+			//TODO: random
+			return box[0];
 		}
 	}
 

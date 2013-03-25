@@ -1940,9 +1940,9 @@ proto.getObjectSGAME = function (o,o2) {
 
 
 proto.getObject = function (o,o2) {
-	this.removeObject(o2);
 	switch(o2.role){
 		case "powerup_food":
+			this.removeObject(o2);
 			o.wounds -= o2.healAmount;
 			if (o.wounds < 0) o.wounds = 0;
 			o.meatEaten++;
@@ -1951,10 +1951,11 @@ proto.getObject = function (o,o2) {
 				var heart = horde.makeObject("mini_heart");
 				heart.position.x = (o.position.x + (j * (o.size.width / 5)));
 				heart.position.y = (o.position.y + o.size.height - horde.randomRange(0, o.size.height));
-				that.addObject(heart);
+				this.addObject(heart);
 			}
 			break;
 		case "powerup_coin":
+			this.removeObject(o2);
 			o.gold += o2.coinAmount;
 			horde.sound.play("coins");
 
@@ -1966,6 +1967,7 @@ proto.getObject = function (o,o2) {
 			c.state = "on";
 			break;
 		case "powerup_weapon":
+			this.removeObject(o2);
 			o.addWeapon(o2.wepType, o2.wepCount);
 			horde.sound.play("pickup_weapon");
 

@@ -4,4 +4,9 @@ class GameTemplate < ActiveRecord::Base
   has_many :games, :dependent => :destroy
   has_many :game_template_events, :dependent => :destroy
 
+  def get_url
+  	# return "/games/templates/" + self.id + "/"
+  	return "/games/templates/oarena/"
+  end
+
 end
