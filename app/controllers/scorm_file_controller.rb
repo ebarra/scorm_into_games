@@ -14,4 +14,10 @@ class ScormFileController < ApplicationController
     end
   end
 
+  def index
+    respond_to do |format|
+      format.json { render :json => ScormFile.all.to_json }
+    end
+  end
+
 end

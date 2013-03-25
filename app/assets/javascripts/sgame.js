@@ -11,7 +11,8 @@ SGAME_WEB = (function($,undefined){
 
 	var init = function (){
 		_createFancybox();
-		_requestData(_createCarrousels);
+		_requestScormFiles(_createScormFilesCarrousel);
+		_requestGameTemplates(_createGameCarrousel);
 		_loadEvents();
 	}
 
@@ -59,14 +60,16 @@ SGAME_WEB = (function($,undefined){
 		_previewGame(catalog.games[Object.keys(catalog.games)[0]]); //Preview first game
 	}
 
-	var _createLOCarrousel = function(los){
+	/* los is an array with scorm_files
+	*/
+	var _createScormFilesCarrousel = function(los){
 		var carrouselImages = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_lo.png'/>")[0]);
 		// carrouselImages.push($("<img src='assets/scorm_golf1.jpg'/>")[0]);
 		// carrouselImages.push($("<img src='assets/scorm_maths.png'/>")[0]);
 		// carrouselImages.push($("<img src='assets/scorm_nano.png'/>")[0]);
 		$.each(los, function(i, lo) {
-			var myImg = $("<img itemId="+lo.id+" src="+lo.avatar+" />");
+			var myImg = $("<img itemId="+lo.id+" src="+lo.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
 			catalog.los[lo.id] = lo;
 		});
@@ -94,16 +97,34 @@ SGAME_WEB = (function($,undefined){
 	/**
 	 * API
 	 */
+	 var _requestScormFiles = function(successCallback,failCallback){
+		$.ajax({
+			async: false,
+			type: 'GET',
+			url: '/scorm_file.json',
+			dataType: 'json',
+			success: function(data) {
+				if(typeof successCallback == "function"){
+					successCallback(data);
+				}
+			},
+			error: function(xhr, ajaxOptions, thrownError){
+				if(typeof failCallback == "function"){
+					failCallback(xhr, ajaxOptions, thrownError);
+				}
+			}
+		});
+	};
 
-	 var _requestData = function(successCallback,failCallback){
+	var _requestGameTemplates = function(successCallback,failCallback){
 		// $.ajax({
 		// 	async: false,
 		// 	type: 'GET',
-		// 	url: '/data.json',
+		// 	url: '/game_templates.json',
 		// 	dataType: 'json',
 		// 	success: function(data) {
 		// 		if(typeof successCallback == "function"){
-		// 			successCallback(data);
+		// 			successCallback(data.templates);
 		// 		}
 		// 	},
 		// 	error: function(xhr, ajaxOptions, thrownError){
@@ -112,9 +133,8 @@ SGAME_WEB = (function($,undefined){
 		// 		}
 		// 	}
 		// });
-
 		var data = {
-			"games":[
+			"templates":[
 				{
 					"id":"1",
 					"name": "Onslaught Arena",
@@ -139,40 +159,14 @@ SGAME_WEB = (function($,undefined){
 					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
 					"avatar":"/assets/game_sokoban.png",
 				}
-			],
-			"los": [
-				{
-					"id":"1",
-					"name": "Golf",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/scorm_golf1.jpg",
-				},
-				{
-					"id":"2",
-					"name": "The Iberian Lynx",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/scorm_iberianLynx.png",
-				},
-				{
-					"id":"3",
-					"name": "Nanotechonology",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/scorm_nano.png",
-				},
-				{
-					"id":"4",
-					"name": "The art of learn maths",
-					"description":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
-					"avatar":"/assets/scorm_maths.png",
-				}
 			]
 		};
-
-		//Testing
 		if(typeof successCallback == "function"){
-			successCallback(data);
+			successCallback(data.templates);
 		}
-	 }
+	}
+
+			 
 
 	/**
 	 * Callbacks
@@ -234,7 +228,7 @@ SGAME_WEB = (function($,undefined){
 
 		var li = $("<li itemid='"+lo.id+"'>")
 
-		var img = $("<img class='lo_preview' src='"+lo.avatar+"' />");
+		var img = $("<img class='lo_preview' src='"+lo.avatar_url+"' />");
 		var img_wrapper = $("<div class='lo_preview_wrapper'>");
 		$(img_wrapper).append(img);
 		$(li).append(img_wrapper);
