@@ -65,10 +65,10 @@ SGAME_WEB = (function($,undefined){
 	var _createScormFilesCarrousel = function(los){
 		var carrouselImages = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_lo.png'/>")[0]);
-		// carrouselImages.push($("<img src='assets/scorm_golf1.jpg'/>")[0]);
-		// carrouselImages.push($("<img src='assets/scorm_maths.png'/>")[0]);
-		// carrouselImages.push($("<img src='assets/scorm_nano.png'/>")[0]);
 		$.each(los, function(i, lo) {
+			if(lo.avatar_url==""){
+				lo.avatar_url = "https://www.servage.net/blog/wp-content/uploads/2012/01/zip.gif";
+			}
 			var myImg = $("<img itemId="+lo.id+" src="+lo.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
 			catalog.los[lo.id] = lo;
