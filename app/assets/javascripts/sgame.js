@@ -1,4 +1,4 @@
-SGAME = (function($,undefined){
+SGAME_WEB = (function($,undefined){
 	var catalog = {};
 	catalog.games = {};
 	catalog.los = {};
@@ -221,8 +221,6 @@ SGAME = (function($,undefined){
 	var _triggerFacyboxToUploadNewLO = function(game){
 		console.log("New LO");
 		$("#upload_scorm").click();
-
-
 	}
 
 	var _addLO = function(lo){
@@ -283,6 +281,4 @@ SGAME = (function($,undefined){
 	};
 
 }) (jQuery);
-
-var global;
 

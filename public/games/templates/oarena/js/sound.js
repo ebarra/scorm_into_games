@@ -38,17 +38,19 @@ horde.sound.init = function horde_sound_init (callback) {
 			}(arguments.callee));
 			break;
 		case "html5":
-			var audio = document.createElement("audio");
+			try {
+				var audio = document.createElement("audio");
 
-			if (audio.canPlayType) {
-				//audio.canPlayType('audio/ogg; codecs="vorbis"');
-				if (!audio.canPlayType("audio/mpeg;")) {
-					//format = ".ogg";
-					api = null;
+				if (audio.canPlayType) {
+					//audio.canPlayType('audio/ogg; codecs="vorbis"');
+					if (!audio.canPlayType("audio/mpeg;")) {
+						//format = ".ogg";
+						api = null;
+					}
 				}
-			}
 
-			callback();
+				callback();
+			} catch(e){}
 			break;
 	}
 };
@@ -148,8 +150,10 @@ horde.sound.stop = function horde_sound_stop (id) {
 			soundManager.stop(id);
 			break;
 		case "html5":
-			sounds[id].pause();
-			sounds[id].currentTime = 0;
+		 	try {
+		 		sounds[id].pause();
+				sounds[id].currentTime = 0;
+		 	} catch(e){}
 			break;
 	}
 };

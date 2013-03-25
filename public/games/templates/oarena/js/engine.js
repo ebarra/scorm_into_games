@@ -1,6 +1,8 @@
+var global;
+
 (function define_horde_Engine () {
 
-var VERSION = "{{VERSION}}";
+var VERSION = "SGAME";
 var SCREEN_WIDTH = 640;
 var SCREEN_HEIGHT = 480;
 var URL_STORE = "https://chrome.google.com/extensions/detail/khodnfbkbanejphecblcofbghjdgfaih";
@@ -55,7 +57,10 @@ horde.Engine = function horde_Engine () {
 	};
 	( function() {
   	var clay = document.createElement("script");
-	  clay.src = ( "https:" == document.location.protocol ? "https://" : "http://" ) + "clay.io/api/api-src.js";
+
+  	  // Using local clay.src whitout annoying logs
+	  // clay.src = ( "https:" == document.location.protocol ? "https://" : "http://" ) + "clay.io/api/api-src.js";
+	  clay.src = "js/clay-api-src.js"
 	  var tag = document.getElementsByTagName("script")[0]; tag.parentNode.insertBefore(clay, tag);
 	} )();
 
@@ -364,9 +369,9 @@ proto.init = function horde_Engine_proto_init () {
 
 	this.mouse = new horde.Mouse(this.canvases["display"]);
 
-	horde.on("contextmenu", function (e) {
-		horde.stopEvent(e);
-	}, document.body, this);
+	// horde.on("contextmenu", function (e) {
+	// 	horde.stopEvent(e);
+	// }, document.body, this);
 
 	horde.on("blur", function () {
 		if (this.state != "running" || this.wonGame) return;
@@ -1123,9 +1128,11 @@ proto.updateSpawnPoints = function horde_Engine_proto_updateSpawnPoints (elapsed
 	}
 };
 
+/*
+ * Spawn all the objects of the waves
+ */
 proto.spawnWaveExtras = function horde_Engine_proto_spawnWaveExtras (waveNumber) {
 	switch (waveNumber) {
-
 		case 1:
 			// Spawn a couple weapons scrolls to give the player an early taste of the fun!
 			var player = this.getPlayerObject();
@@ -1692,6 +1699,10 @@ proto.moveObject = function horde_Engine_proto_moveObject (object, elapsed) {
 
 };
 
+/*
+ * Drop objects into the arena
+ * Called from spawn loot
+ */
 proto.dropObject = function horde_Engine_proto_dropObject (object, type) {
 	var drop = horde.makeObject(type);
 	drop.position = object.position.clone();
@@ -1820,57 +1831,8 @@ proto.updateObjects = function (elapsed) {
 			// Reduce the size of the bounding boxes a tad when evaluating object => object collision
 			if (o.boundingBox().reduce(5).intersects(o2.boundingBox().reduce(5))) {
 				if (o.role == "hero") {
-					if (o2.role == "powerup_food") {
-						o2.die();
-						o.wounds -= o2.healAmount;
-						if (o.wounds < 0) o.wounds = 0;
-						o.meatEaten++;
-						horde.sound.play("eat_food");
-						for (var j = 0; j < 5; ++j) {
-							var heart = horde.makeObject("mini_heart");
-							heart.position.x = (o.position.x + (j * (o.size.width / 5)));
-							heart.position.y = (o.position.y + o.size.height - horde.randomRange(0, o.size.height));
-							this.addObject(heart);
-						}
-					} else if (o2.role == "powerup_coin") {
-						o2.die();
-						o.gold += o2.coinAmount;
-						horde.sound.play("coins");
-
-						var c = this.coinPickup;
-						c.amount = o2.coinAmount;
-						c.y = 0;
-						c.alpha = 1;
-						c.position = o2.position.clone();
-						c.state = "on";
-
-						if (this.isSpecialLoot(o2.type)) {
-							for (var j in this.objects) {
-								if (this.objects[j].type === "pickup_arrow") {
-									this.objects[j].die();
-								}
-							}
-						}
-					} else if (o2.role == "powerup_weapon") {
-						o2.die();
-						o.addWeapon(o2.wepType, o2.wepCount);
-						horde.sound.play("pickup_weapon");
-
-						var w = this.weaponPickup;
-						w.type = o2.type;
-						w.scale = 1;
-						w.alpha = 0.9;
-						w.position = o2.position.clone();
-						w.state = "on";
-
-						if (this.isSpecialLoot(o2.type)) {
-							for (var j in this.objects) {
-								if (this.objects[j].type === "pickup_arrow") {
-									this.objects[j].die();
-								}
-							}
-						}
-					}
+					// this.getObject(o,o2);
+					this.getObjectSGAME(o,o2);
 				}
 				if (
 					o.team !== null
@@ -1947,6 +1909,88 @@ proto.updateObjects = function (elapsed) {
 	}
 
 };
+
+proto.getObjectSGAME = function (o,o2) {
+	if(o2.role!=="powerup_weapon"){
+		this.getObject(o,o2);
+		return;
+	}
+
+	this.togglePause();
+	this.keyboard.clearKeys();
+	var that = this;
+	
+	setTimeout(function(){
+		SGAME.triggerLO(1,function(pass){
+			setTimeout(function(){
+				that.togglePause();
+				that.keyboard.clearKeys();
+
+				if(!pass){
+					that.removeObject(o2);
+					return;
+				}
+
+				that.getObject(o,o2);
+
+			},50);
+		});
+	},50);
+}
+
+
+proto.getObject = function (o,o2) {
+	this.removeObject(o2);
+	switch(o2.role){
+		case "powerup_food":
+			o.wounds -= o2.healAmount;
+			if (o.wounds < 0) o.wounds = 0;
+			o.meatEaten++;
+			horde.sound.play("eat_food");
+			for (var j = 0; j < 5; ++j) {
+				var heart = horde.makeObject("mini_heart");
+				heart.position.x = (o.position.x + (j * (o.size.width / 5)));
+				heart.position.y = (o.position.y + o.size.height - horde.randomRange(0, o.size.height));
+				that.addObject(heart);
+			}
+			break;
+		case "powerup_coin":
+			o.gold += o2.coinAmount;
+			horde.sound.play("coins");
+
+			var c = this.coinPickup;
+			c.amount = o2.coinAmount;
+			c.y = 0;
+			c.alpha = 1;
+			c.position = o2.position.clone();
+			c.state = "on";
+			break;
+		case "powerup_weapon":
+			o.addWeapon(o2.wepType, o2.wepCount);
+			horde.sound.play("pickup_weapon");
+
+			var w = this.weaponPickup;
+			w.type = o2.type;
+			w.scale = 1;
+			w.alpha = 0.9;
+			w.position = o2.position.clone();
+			w.state = "on";
+			break;
+		default:
+			break;
+	}
+}
+
+proto.removeObject = function(object){
+	object.die();
+	if (this.isSpecialLoot(object.type)) {
+		for (var j in this.objects) {
+			if (this.objects[j].type === "pickup_arrow") {
+				this.objects[j].die();
+			}
+		}
+	}
+}
 
 // Deals damage from object "attacker" to "defender"
 proto.dealDamage = function (attacker, defender) {
@@ -3097,6 +3141,7 @@ proto.render = function horde_Engine_proto_render () {
 };
 
 proto.drawWeaponPickup = function horde_Engine_proto_drawWeaponPickup (ctx) {
+
 	var w = this.weaponPickup;
 	if (w.state === "on") {
 		var type = horde.makeObject(w.type);
