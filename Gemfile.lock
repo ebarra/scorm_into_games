@@ -1,7 +1,7 @@
 PATH
   remote: ../scorm
   specs:
-    scorm (1.0.2)
+    scorm (1.0.4)
       rubyzip (~> 0.9.4)
 
 GEM

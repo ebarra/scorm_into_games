@@ -1,13 +1,13 @@
 SGAME_WEB = (function($,undefined){
 	var catalog = {};
 	catalog.games = {};
-	catalog.los = {};
+	catalog.sfs = {};
 
 	current_game = {};
-	current_los = [];
+	current_scorm_files = [];
 
 	var games_carrousel_id = "games_carrousel";
-	var lo_carrousel_id = "lo_carrousel";
+	var sf_carrousel_id = "lo_carrousel";
 
 	var init = function (){
 		_createFancybox();
@@ -31,15 +31,12 @@ SGAME_WEB = (function($,undefined){
 
 	var _createCarrousels = function(data){
 		_createGameCarrousel(data.games);
-		_createLOCarrousel(data.los);
+		_createSFCarrousel(data.los);
 	};
 
 	var _createGameCarrousel = function(games){
 		var carrouselImages = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_game.png'/>")[0]);
-		// carrouselImages.push($("<img src='assets/game_dpark.png'/>")[0]);
-		// carrouselImages.push($("<img src='assets/game_OnslaughtArena.jpg'/>")[0]);
-		// carrouselImages.push($("<img src='assets/game_sokoban.png'/>")[0]);
 		$.each(games, function(i, game) {
 			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
@@ -60,30 +57,30 @@ SGAME_WEB = (function($,undefined){
 		_previewGame(catalog.games[Object.keys(catalog.games)[0]]); //Preview first game
 	}
 
-	/* los is an array with scorm_files
+	/* sfs is an array with scorm_files
 	*/
-	var _createScormFilesCarrousel = function(los){
+	var _createScormFilesCarrousel = function(sfs){
 		var carrouselImages = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_lo.png'/>")[0]);
-		$.each(los, function(i, lo) {
+		$.each(sfs, function(i, lo) {
 			if(lo.avatar_url==""){
 				lo.avatar_url = "https://www.servage.net/blog/wp-content/uploads/2012/01/zip.gif";
 			}
 			var myImg = $("<img itemId="+lo.id+" src="+lo.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
-			catalog.los[lo.id] = lo;
+			catalog.sfs[lo.id] = lo;
 		});
-		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onLOImagesLoaded,lo_carrousel_id);
+		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onSFImagesLoaded,sf_carrousel_id);
 	}
 
-	var _onLOImagesLoaded = function(){
-		$("#" + lo_carrousel_id).show();
+	var _onSFImagesLoaded = function(){
+		$("#" + sf_carrousel_id).show();
 		var options = new Array();
 		options['rows'] = 1;
-		options['callback'] = _onLOSelected;
+		options['callback'] = _onSFSelected;
 		options['rowItems'] = 3;
 		options['styleClass'] = "game";
-		CarrouselWrapper.createCarrousel(lo_carrousel_id, options);
+		CarrouselWrapper.createCarrousel(sf_carrousel_id, options);
 	}
 
 
@@ -154,7 +151,7 @@ SGAME_WEB = (function($,undefined){
 		}
 	}
 
-	var _onLOSelected = function(event){
+	var _onSFSelected = function(event){
 		var itemid = $(event.target).attr("itemid");
 		if(itemid!==undefined){
 			var id = parseInt(itemid);
@@ -162,8 +159,8 @@ SGAME_WEB = (function($,undefined){
 				_triggerFacyboxToUploadNewLO();
 				return;
 			}
-			var lo = catalog.los[id];
-			_addLO(lo);
+			var sf = catalog.sfs[id];
+			_addSF(sf);
 		}
 	}
 
@@ -186,25 +183,30 @@ SGAME_WEB = (function($,undefined){
 		$("#upload_scorm").click();
 	}
 
-	var _addLO = function(lo){
+	var _addSF = function(sf){
 
 		//Max 3
-		if(current_los.length >= 3){
+		if(current_scorm_files.length >= 3){
 			return;
 		}
 
-		current_los.push(lo);
+		current_scorm_files.push(sf);
 
-		var li = $("<li itemid='"+lo.id+"'>")
+		var scos_ids = sf.scos_ids;
+		var assets_ids = sf.assets_ids;
+		var all_ids = scos_ids.concat(assets_ids);
+		var li = $("<li onclick='SGAME_WEB.previewScormFile(["+all_ids+"], \""+sf.name+"\");' itemid='"+sf.id+"'>")
 
-		var img = $("<img class='lo_preview' src='"+lo.avatar_url+"' />");
+		var img = $("<img class='lo_preview' src='"+sf.avatar_url+"' />");
 		var img_wrapper = $("<div class='lo_preview_wrapper'>");
 		$(img_wrapper).append(img);
 		$(li).append(img_wrapper);
 
-		var description = $("<p class='lo_description'>"+lo.description+"</p>");
+		var description = $("<p class='lo_description'>"+sf.description+"</p>");
+		var description2 = $("<p class='lo_number'>"+scos_ids.length+" SCOs and "+assets_ids.length+" assets</p>");
 		var description_wrapper = $("<div class='lo_description_wrapper'>");
 		$(description_wrapper).append(description);
+		$(description_wrapper).append(description2);
 		$(li).append(description_wrapper);
 
 		var remove = $("<div class='remove_wrapper'><img class='remove' src='/assets/remove.png'/></div>");
@@ -215,32 +217,42 @@ SGAME_WEB = (function($,undefined){
 		$(remove).click(function(event){
 			var li = $(event.target).parent().parent();
 			var id = $(li).attr("itemid");
-	 		 _removeLO(catalog.los[id]);
+	 		 _removeLO(catalog.sfs[id]);
 	 		 $(li).remove();
 		});
+	};
 
-		// <li>
-  //       <div class="lo_preview_wrapper">
-  //         <img class="lo_preview" src="/assets/scorm_nano.png" />
-  //       </div>
-  //       <div class="lo_description_wrapper">
-  //         <p class="lo_description"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-  //         </p>
-  //       </div>
-  //       <div class="remove_wrapper">
-  //         <img class="remove" src="/assets/remove.png" />
-  //       </div>
-  //     </li>
+	//receives an array of ids of the los to show
+	var previewScormFile = function(lo_ids_array, sf_name){
+		var links = "";
+		$.each(lo_ids_array, function(i, lo_id) {
+			var title = 'Preview of the learning object #'+i+ ' from the SCORM package "'+sf_name+'"';
+			links += "<a rel='hidden_lo' href='/lo/"+lo_id+"' title='"+title+"'></a>";
+		});
 
 
-	}
+		$("#hidden_for_fancy").append(links);
+		$("a[rel=hidden_lo]").fancybox({
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'width'             : '75%',
+                'height'            : '75%',
+                'autoScale'         : false,
+                'type'              : 'iframe',
+                'titleShow'			: true,
+                'titlePosition' 	: 'inside',
+                'onClosed'			: function(){ $("a[rel=hidden_lo]").remove();}
+            });
+		$("a[rel=hidden_lo]:first").click();
+	};
 
 	var _removeLO = function(lo){
-		current_los.splice(current_los.indexOf(lo),1);
+		current_scorm_files.splice(current_scorm_files.indexOf(lo),1);
 	}
 
 	return {
-		init : init
+		init : init,
+		previewScormFile: previewScormFile
 	};
 
 }) (jQuery);

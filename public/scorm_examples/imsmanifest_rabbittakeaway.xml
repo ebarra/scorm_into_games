@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="SumsMathsActivitiesCA12_27Apr09v2" version="1.1" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+xmlns:imsss="http://www.imsglobal.org/xsd/imsss">
+<metadata xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3">
+<schema>ADL SCORM</schema>
+<schemaversion>2004 3rd Edition</schemaversion>
+<adlcp:location>CAM_Metadata.xml</adlcp:location>
+</metadata>
+<organizations default="Org001">
+  <organization identifier="Org001" structure="Hierarchical">
+  <title>SUMS Rabbit Takeaway 270409</title>
+	<item identifier="rabbittakeaway.htm" isvisible="true" identifierref="SUMSCalc1rt1">
+	<title>Rabbit Takeaway</title>
+	<imsss:sequencing>
+    <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+	</imsss:sequencing>
+	</item>
+	<imsss:sequencing>
+	<imsss:controlMode flow="true"/>
+	</imsss:sequencing>
+</organization>
+</organizations>
+<resources>
+<resource adlcp:scormType="sco" identifier="SUMSCalc1rt1" type="webcontent" href="Calculations/Unit1/ca12_rabbittakeaway/rabbittakeaway.htm" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3">
+    <metadata><adlcp:location>Calculations/Unit1/ca12_rabbittakeaway/rabbittakeaway.xml</adlcp:location></metadata>
+    <file href="Calculations/Unit1/ca12_rabbittakeaway/rabbittakeaway.htm"></file> 
+    <file href="Calculations/Unit1/ca12_rabbittakeaway/ca12.swf"></file> 
+    <file href="Calculations/Unit1/ca12_rabbittakeaway/scorm_player.swf"></file>
+	<file href="thejs/APIWrapper.js"></file>
+</resource>
+</resources>
+</manifest>

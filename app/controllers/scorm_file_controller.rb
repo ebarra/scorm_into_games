@@ -16,7 +16,7 @@ class ScormFileController < ApplicationController
 
   def index
     respond_to do |format|
-      format.json { render :json => ScormFile.all.to_json }
+      format.json { render :json => ScormFile.all.to_json(:methods => [:scos_ids, :assets_ids]) }
     end
   end
 

@@ -6,7 +6,9 @@ namespace :db do
   	Dir.mkdir "#{Rails.root}/public/scorm/1/"
   	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/rabbittakeaway.zip'), File.join(Rails.root, 'public/scorm/1/rabbittakeaway.zip'))
 	Dir.mkdir "#{Rails.root}/public/scorm/2/"
-  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/hiddencraft.zip'), File.join(Rails.root, 'public/scorm/2/hiddencraft.zip'))
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/golf_n_sco.zip'), File.join(Rails.root, 'public/scorm/2/golf_n_sco.zip'))
+	Dir.mkdir "#{Rails.root}/public/scorm/3/"
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/hiddencraft.zip'), File.join(Rails.root, 'public/scorm/3/hiddencraft.zip'))
 
   	#first scrom file with its learning object
 	sf = ScormFile.create!  :name  => "Rabbittakeaway",
@@ -15,10 +17,16 @@ namespace :db do
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/1/rabbittakeaway.zip'))
 
 	#second scrom file with its learning object
+	sf = ScormFile.create!  :name  => "Golf",
+	                        :description   => "SCORM package that explains everything about golf",
+	                        :avatar_url => "http://www.chester.com/images/golf/golf3.jpg",
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/2/golf_n_sco.zip'))
+
+	#third scrom file with its learning object
 	sf = ScormFile.create!  :name  => "Hiddencraft",
 	                        :description   => "Hiddencraft mini game to learn maths",
-	                        :avatar_url => "http://onlinemaths.global2.vic.edu.au/files/2009/06/hidden-craft.jpg",
-						    :source =>  File.open(File.join(Rails.root, 'public/scorm/2/hiddencraft.zip'))
+	                        :avatar_url => "/hidden-craft.jpg",
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/3/hiddencraft.zip'))
 
     
 	#now three game templates
