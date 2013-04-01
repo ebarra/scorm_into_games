@@ -24,14 +24,16 @@ body {
 }
 
 .header{
-  width: 100%;
+  width: 1100px;
   height: 90px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo_wrapper{
-  margin-left: 10%;
-  width: 15%;
+  margin-left: 0%;
+  width: 20%;
   float: left;
 }
 
@@ -40,9 +42,9 @@ img.logo {
 }
 
 .description_wrapper{
-  margin-left: 8%;
-  margin-right: 8%;
-  width: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 40%;
   float: left;
 }
 
@@ -54,18 +56,18 @@ img.logo {
 }
 
 .gallery_wrapper{
-  width: 15%;
+  width: 20%;
   float: left;
 }
 
 .gallery{
-  /*width: 100%;*/
+  width: 100%;
 }
 
 .tool {
-  width: 1400px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   height: 637px;
 }
@@ -98,12 +100,15 @@ img.logo {
 
 .plus{
   position: absolute;
-  top: 443px;
-  left: 626px;
+  top: 510px;
+  left: 745px;
 }
 
 .carrousel_wrapper{
   height: 160px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-bottom: 9px;
+  padding-left: 5px;
 }
 
 .data{
@@ -148,6 +153,7 @@ img.logo {
 
 ul#lo_list {
   list-style-type: none;
+  margin-left: 35px;
 }
 
 ul#lo_list li {
@@ -168,7 +174,8 @@ ul#lo_list li {
 
 .lo_description_wrapper{
   float:left;
-  max-width: 350px;
+  max-width: 345px;
+  min-width: 345px;
   padding:5px;
   vertical-align: middle;
 }
@@ -183,11 +190,14 @@ ul#lo_list li {
 .remove_wrapper{
   float:left;
   max-width: 25px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .remove{
   min-width: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .create{
@@ -196,12 +206,17 @@ ul#lo_list li {
   background: #046598;
   position: absolute;
   top: 710px;
-  left: 591px;
+  left: 710px;
   font-size: 20px;
   text-align: center;
   color: white;
   padding: 5px;
   border: 3px solid white;
+  cursor: pointer;
+}
+
+.create:hover{
+  font-size: 24px;
 }
 
 .create > p {

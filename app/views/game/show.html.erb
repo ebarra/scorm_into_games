@@ -11,8 +11,8 @@
 	$(document).ready(function(){
 		$("#game").load(function(){
 			if((typeof window.frames.game.SGAME === "object")&&
-				(typeof window.frames.game.SGAME.init === "function")){
-					window.frames.game.SGAME.init(settings);
+				(typeof window.frames.game.SGAME.loadSettings === "function")){
+					window.frames.game.SGAME.loadSettings(settings);
 			};
 		});
 	});

@@ -50,7 +50,7 @@ class Game < ActiveRecord::Base
 			end
 			mapping = Hash.new;
 			mapping["event_id"] = event_id;
-			mapping["lo_id"] = los;
+			mapping["los_id"] = los;
 			settings["event_mapping"].push(mapping);
 		end
 		return settings

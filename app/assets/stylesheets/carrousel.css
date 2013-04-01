@@ -2,22 +2,6 @@ div.caroufredsel_wrapper{
   overflow: visible !important;
 }
 
-#arrow_left_div {
-  background: url(/assets/arrow_left.png);
-}
-
-#arrow_left_div:hover {
-  background: url(/assets/arrow_left_hover.png);
-}
-
-#arrow_right_div {
-  background: url(/assets/arrow_right.png);
-}
-
-#arrow_right_div:hover {
-  background: url(/assets/arrow_right_hover.png);
-}
-
 div.image_carousel {
     position: relative;
     width: 540px;
@@ -70,16 +54,20 @@ a.prev:hover {
 a.prev.disabled {   
   background-position: 0 -100px !important;  
 }
+
 a.next {  
   right: 0px;
   background-position: -50px 0; 
 }
+
 a.next:hover {      
   background-position: -50px -50px; 
 }
+
 a.next.disabled {   
   background-position: -50px -100px !important;  
 }
+
 a.prev.disabled, a.next.disabled {
     cursor: default;
 }

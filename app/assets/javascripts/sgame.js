@@ -178,11 +178,10 @@ SGAME_WEB = (function($,undefined){
 	}
 
 	var _triggerFacyboxToUploadNewGame = function(game){
-		console.log("New game");
+		// console.log("New game");
 	}
 
 	var _triggerFacyboxToUploadNewLO = function(game){
-		console.log("New LO");
 		$("#upload_scorm").click();
 	}
 
@@ -190,6 +189,11 @@ SGAME_WEB = (function($,undefined){
 
 		//Max 3
 		if(current_los.length >= 3){
+			return;
+		}
+
+		//Already added LO
+		if(current_los.indexOf(lo)!==-1){
 			return;
 		}
 
