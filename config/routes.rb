@@ -60,6 +60,7 @@ Demo::Application.routes.draw do
 
 
   resources :scorm_file
+  resources :lo
   resources :game
   resources :game_template
   root :to => 'game#new'
