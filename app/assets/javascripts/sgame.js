@@ -190,7 +190,7 @@ SGAME_WEB = (function($,undefined){
 		}
 
 		//Already added LO
-		if(current_scorm_files.indexOf(lo)!==-1){
+		if(current_scorm_files.indexOf(sf)!==-1){
 			return;
 		}
 		current_scorm_files.push(sf);
@@ -220,7 +220,7 @@ SGAME_WEB = (function($,undefined){
 		$(remove).click(function(event){
 			var li = $(event.target).parent().parent();
 			var id = $(li).attr("itemid");
-	 		 _removeLO(catalog.sfs[id]);
+	 		 _removeSF(catalog.sfs[id]);
 	 		 $(li).remove();
 		});
 	};
@@ -249,8 +249,8 @@ SGAME_WEB = (function($,undefined){
 		$("a[rel=hidden_lo]:first").click();
 	};
 
-	var _removeLO = function(lo){
-		current_scorm_files.splice(current_scorm_files.indexOf(lo),1);
+	var _removeSF = function(sf){
+		current_scorm_files.splice(current_scorm_files.indexOf(sf),1);
 	}
 
 	return {
