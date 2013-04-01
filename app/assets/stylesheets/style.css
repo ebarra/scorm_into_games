@@ -240,3 +240,22 @@ ul#lo_list li {
 #form_scorm label{
   font-size: 15px;
 }
+
+
+/*to modify fancybox behaviour*/
+#fancybox-title {
+  z-index: 1000; /*to be behind arrows*/
+}
+
+#fancybox-left, #fancybox-right {
+  height: 30px;
+}
+
+#fancybox-left span{
+  left: 20px;
+}
+
+#fancybox-right span{
+  right: 20px;
+  left: auto;
+}
