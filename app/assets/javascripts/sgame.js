@@ -175,11 +175,10 @@ SGAME_WEB = (function($,undefined){
 	}
 
 	var _triggerFacyboxToUploadNewGame = function(game){
-		console.log("New game");
+		// console.log("New game");
 	}
 
 	var _triggerFacyboxToUploadNewLO = function(game){
-		console.log("New LO");
 		$("#upload_scorm").click();
 	}
 
@@ -190,6 +189,10 @@ SGAME_WEB = (function($,undefined){
 			return;
 		}
 
+		//Already added LO
+		if(current_scorm_files.indexOf(lo)!==-1){
+			return;
+		}
 		current_scorm_files.push(sf);
 
 		var scos_ids = sf.scos_ids;

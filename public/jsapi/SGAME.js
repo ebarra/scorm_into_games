@@ -7,30 +7,98 @@
 
 SGAME = (function(undefined){
 	
+	//Modules
+
+	///////////
+	// Debugger
+	//////////
+	var deb = (function(undefined){
+
+		var _debugging = false;
+
+		var init = function(debugging){
+			if(debugging===true){
+				_debugging = debugging;
+			}
+		}
+
+		var log = function(msg){
+			if((_debugging)&&(window.console)){
+				console.log(msg)
+			}
+		}
+
+		return {
+			init	: init,
+			log		: log
+		};
+
+	}) ();
+
+
+	///////////
+	// Fancybox
+	//////////
+	var fancybox = (function(undefined){
+
+		var init = function(){
+
+		}
+
+		return {
+			init 			: init
+		};
+
+	}) ();
+
+
+	//Init debug module for developping
+	deb.init(true);
+
+	//vars
 	var _settings;
-	var event_mapping = {};
+	var _event_mapping = {};
+	var _togglePauseFunction = undefined;
 
-	var init = function(settings) {
-		console.log("SGAME init with settings ");
-		console.log(settings);
+	var init = function(options) {
+		deb.log("SGAME init with options ");
+		deb.log(options);
 
-		_settings = settings;
-		
-		if(settings.event_mapping){
-			for(var i=0;i<settings.event_mapping.length;i++){
-				event_mapping[settings.event_mapping[i].event_id] = settings.event_mapping[i].lo_id;
+		if(options){
+			if(typeof options.togglePause === "function"){
+				_togglePauseFunction = options.togglePause;
 			}
 		}
 	};
 
+	var _togglePause = function(){
+		if(typeof _togglePauseFunction === "function"){
+			_togglePauseFunction();
+		}
+	}
+
+	var loadSettings = function(settings){
+		deb.log("SGAME load settings ");
+		deb.log(settings);
+		_settings = settings;
+
+		if(settings.event_mapping){
+			for(var i=0;i<settings.event_mapping.length;i++){
+				_event_mapping[settings.event_mapping[i].event_id] = {};
+				_event_mapping[settings.event_mapping[i].event_id].los = settings.event_mapping[i].los_id;
+			}
+		}
+	}
+
+
 	var triggerLO = function(event_id,callback){
-		var los_candidate = event_mapping[event_id];
-		//TODO: Select lo in function of event_id
+		var los_candidate = _event_mapping[event_id];
 		if(los_candidate){
 			var loId = _randomChoice(los_candidate);
 			_renderLO(loId,callback);
 		}
 	};
+
 
 	/*
 	 * Uses cases:
@@ -45,6 +113,7 @@ SGAME = (function(undefined){
 		}
 	};
 
+
 	var _showLO = function(options,callback){
 		var loId;
 		if(typeof options == "object"){
@@ -57,13 +126,17 @@ SGAME = (function(undefined){
 		_renderLO(loId,callback);
 	};
 
+
 	var _renderLO = function(loId,callback){
 		//TODO: render LO
+		_togglePause();
 		var result = confirm('¿Quieres consumir este LO?');
 		if(typeof callback == "function"){
 			callback(result);
+			_togglePause();
 		}
 	}
+
 
 	//Utils
 	var _randomChoice = function(box){
@@ -76,13 +149,13 @@ SGAME = (function(undefined){
 	}
 
 	return {
-		init 		: init,
-		showLO 		: showLO,
-		triggerLO	: triggerLO
+		init 			: init,
+		loadSettings	: loadSettings,
+		showLO 			: showLO,
+		triggerLO		: triggerLO
 	};
 
 }) ();
-
 
 //Metadata
 SGAME.VERSION = '0.1';

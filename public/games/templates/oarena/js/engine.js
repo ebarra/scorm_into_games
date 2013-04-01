@@ -1,5 +1,3 @@
-var global;
-
 (function define_horde_Engine () {
 
 var VERSION = "SGAME";
