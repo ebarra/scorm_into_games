@@ -198,12 +198,16 @@ SGAME_WEB = (function($,undefined){
 		var scos_ids = sf.scos_ids;
 		var assets_ids = sf.assets_ids;
 		var all_ids = scos_ids.concat(assets_ids);
-		var li = $("<li onclick='SGAME_WEB.previewScormFile(["+all_ids+"], \""+sf.name+"\");' itemid='"+sf.id+"'>")
+		var li = $("<li itemid='"+sf.id+"'>")
 
 		var img = $("<img class='lo_preview' src='"+sf.avatar_url+"' />");
 		var img_wrapper = $("<div class='lo_preview_wrapper'>");
 		$(img_wrapper).append(img);
 		$(li).append(img_wrapper);
+
+		$(img).click(function(){
+			_previewScormFile(all_ids,sf.name);
+		});
 
 		var description = $("<p class='lo_description'>"+sf.description+"</p>");
 		var description2 = $("<p class='lo_number'>"+scos_ids.length+" SCOs and "+assets_ids.length+" assets</p>");
@@ -226,20 +230,19 @@ SGAME_WEB = (function($,undefined){
 	};
 
 	//receives an array of ids of the los to show
-	var previewScormFile = function(lo_ids_array, sf_name){
+	var _previewScormFile = function(lo_ids_array, sf_name){
 		var links = "";
 		$.each(lo_ids_array, function(i, lo_id) {
 			var title = 'Preview of the learning object #'+i+ ' from the SCORM package "'+sf_name+'"';
 			links += "<a rel='hidden_lo' href='/lo/"+lo_id+"' title='"+title+"'></a>";
 		});
 
-
 		$("#hidden_for_fancy").append(links);
 		$("a[rel=hidden_lo]").fancybox({
                 'transitionIn'      : 'none',
                 'transitionOut'     : 'none',
                 'width'             : '75%',
-                'height'            : '75%',
+                'height'            : '85%',
                 'autoScale'         : false,
                 'type'              : 'iframe',
                 'titleShow'			: true,
@@ -254,8 +257,7 @@ SGAME_WEB = (function($,undefined){
 	}
 
 	return {
-		init : init,
-		previewScormFile: previewScormFile
+		init : init
 	};
 
 }) (jQuery);

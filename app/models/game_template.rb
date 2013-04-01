@@ -5,8 +5,7 @@ class GameTemplate < ActiveRecord::Base
   has_many :game_template_events, :dependent => :destroy
 
   def get_url
-  	# return "/games/templates/" + self.id + "/"
-  	return "/games/templates/oarena/"
+  	return "/games/templates/" + self.id.to_s() + "/"
   end
 
 end

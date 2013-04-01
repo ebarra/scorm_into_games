@@ -4,5 +4,4 @@ class Lo < ActiveRecord::Base
   belongs_to :scorm_file
   has_many :event_mappings, :dependent => :destroy
 
-
 end
