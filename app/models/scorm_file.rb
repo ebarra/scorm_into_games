@@ -29,8 +29,8 @@ class ScormFile < ActiveRecord::Base
 	   	 lo.scorm_type = resource.scorm_type
 	   	 lo.href = resource.href
 	   	 lo.scorm_file = self
-	   	 lo.save	   	 
-	   	 #TODO salvar solo los que sean sco. o mejor los que estén dentro de organization
+       lo.metadata = YAML.dump(resource.metadata)
+	   	 lo.save
 	   end
 	end
   end

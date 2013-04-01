@@ -5,6 +5,7 @@ class CreateLos < ActiveRecord::Migration
       t.string :lo_type
       t.string :scorm_type
       t.string :href
+      t.string :metadata
       t.timestamps
     end
   end

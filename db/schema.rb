@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130323114536) do
     t.string   "lo_type"
     t.string   "scorm_type"
     t.string   "href"
+    t.string   "metadata"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
