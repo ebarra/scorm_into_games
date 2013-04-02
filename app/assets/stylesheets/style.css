@@ -190,6 +190,10 @@ ul#lo_list li {
   vertical-align: middle;
 }
 
+.lo_number{
+  padding-left: 5px;
+}
+
 .remove_wrapper{
   float:left;
   max-width: 25px;
@@ -210,7 +214,7 @@ ul#lo_list li {
   position: absolute;
   top: 710px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -60px;
   font-size: 20px;
   text-align: center;
   color: white;
