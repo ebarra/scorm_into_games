@@ -1,3 +1,7 @@
+div.carrousel_wrapper{
+    padding-bottom: 25px;
+}
+
 div.caroufredsel_wrapper{
   overflow: visible !important;
 }
@@ -79,7 +83,7 @@ a.prev span, a.next span {
 div.pagination {
   text-align: center;
 	margin-right: 0px;
-	margin-top: 17px !important;
+	margin-top: 17px;
 }
 
 div.pagination a {
@@ -188,13 +192,16 @@ div.carrousel_element_single_row_game{
 
 p.carrousel_element_single_row_game{
   margin: 0px;
-  max-width: 100px;
+  max-width: 124px;
   max-height: 20px;
-  overflow: hidden;
-  margin-left: -20px;
+  margin-left: -67px;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   font-family: Helvetica;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 1px;
 }
 
 div.carrousel_element_single_row_game > img.carrousel_element_single_row_game {
@@ -202,12 +209,12 @@ div.carrousel_element_single_row_game > img.carrousel_element_single_row_game {
 }
 
 a.prev_single_row_game, a.next_single_row_game {
-  top: 61px;
+  top: 73px;
 }
 
 /** ADD style to pagination class (Optional) */
 div.pagination_single_row_game {
-  margin-top: 10px;
+  margin-top: 34px;
   margin-bottom: 15px;
 }
 

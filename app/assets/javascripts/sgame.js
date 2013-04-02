@@ -36,13 +36,16 @@ SGAME_WEB = (function($,undefined){
 
 	var _createGameCarrousel = function(games){
 		var carrouselImages = [];
+		var carrouselImagesTitles = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_game.png'/>")[0]);
+		carrouselImagesTitles.push("Upload");
 		$.each(games, function(i, game) {
 			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
+			carrouselImagesTitles.push(game.name);
 			catalog.games[game.id] = game;
 		});
-		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onGameImagesLoaded,games_carrousel_id);
+		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onGameImagesLoaded,games_carrousel_id,carrouselImagesTitles);
 	}
 
 	var _onGameImagesLoaded = function(){
@@ -61,16 +64,19 @@ SGAME_WEB = (function($,undefined){
 	*/
 	var _createScormFilesCarrousel = function(sfs){
 		var carrouselImages = [];
+		var carrouselImagesTitles = [];
 		carrouselImages.push($("<img itemId='-1' src='assets/add_lo.png'/>")[0]);
+		carrouselImagesTitles.push("Upload");
 		$.each(sfs, function(i, lo) {
 			if(lo.avatar_url==""){
 				lo.avatar_url = "https://www.servage.net/blog/wp-content/uploads/2012/01/zip.gif";
 			}
 			var myImg = $("<img itemId="+lo.id+" src="+lo.avatar_url+" />");
 			carrouselImages.push($(myImg)[0]);
+			carrouselImagesTitles.push(lo.name);
 			catalog.sfs[lo.id] = lo;
 		});
-		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onSFImagesLoaded,sf_carrousel_id);
+		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onSFImagesLoaded,sf_carrousel_id,carrouselImagesTitles);
 	}
 
 	var _onSFImagesLoaded = function(){

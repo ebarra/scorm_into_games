@@ -322,32 +322,6 @@ CarrouselWrapper = (function($,undefined){
 		$("#" + carrouselDivId).trigger("insertItem", [element, posc]);
 	}
 
-	var mustMoveCarrousel = function(direction){
-		if(!V.Editor.Slides.isSlideFocused()){
-			return false;
-		}
-		var visibleThumbnails = V.Editor.Thumbnails.getVisibleThumbnails();
-		switch(direction){
-			case "next":
-				var last = visibleThumbnails[1];
-				var future = V.Slides.getCurrentSlideNumber()+1;
-				if(future>last){
-					return true;
-				}
-				break;
-			case "prev":
-				var first = visibleThumbnails[0];
-				var future = V.Slides.getCurrentSlideNumber()-1;
-				if(future < first){
-					return true;
-				}
-				break;
-			default:
-				return false;
-		}
-	}
-
-
 	var loadImagesOnCarrouselOrder = function(imagesArray,callback, carrouselDivId,titleArray){
 		var validImagesArray = imagesArray;
 		var imagesLength = imagesArray.length;
@@ -376,7 +350,7 @@ CarrouselWrapper = (function($,undefined){
 		$.each(imagesArray, function(i, image) {
 			if((titleArray)&&(titleArray[imagesArray.indexOf(image)])){
 				var title = titleArray[imagesArray.indexOf(image)];
-				$("#" + carrouselDivId).append("<div><p>"+title+"</p>" + V.Utils.getOuterHTML(image) + "</div>");
+				$("#" + carrouselDivId).append("<div><p>"+title+"</p>" + _getOuterHTML(image) + "</div>");
 			} else {
 				$("#" + carrouselDivId).append('<div>' + _getOuterHTML(image) + '</div>');
 			}
@@ -400,7 +374,6 @@ CarrouselWrapper = (function($,undefined){
 		advanceCarrousel  : advanceCarrousel,
 		backCarrousel     : backCarrousel,
 		insertElement	  : insertElement,
-		mustMoveCarrousel : mustMoveCarrousel,
 		loadImagesOnCarrouselOrder	: loadImagesOnCarrouselOrder
 	};
 
