@@ -150,6 +150,11 @@ img.logo {
   padding: 5px;
   padding-top: 10px;
   font-size: 15px;
+  text-align: center;
+  font-family: Helvetica;
+  overflow: hidden;
+  /*text-overflow: ellipsis;*/
+  max-height: 34px;
 }
 
 

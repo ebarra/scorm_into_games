@@ -1,19 +1,17 @@
 <html>
 <head>
 	<script src="/assets/application.js"></script>
+	<title><%=@game.name%></title>
 </head>
 <body>
-<p><%=@game.name%></p>
-
 <script>
 	var settings = JSON.parse('<%=@settings.to_json.html_safe%>');
 
 	$(document).ready(function(){
 		$("#game").load(function(){
-			if((typeof window.frames.game.SGAME === "object")&&
-				(typeof window.frames.game.SGAME.loadSettings === "function")){
-					window.frames.game.SGAME.loadSettings(settings);
-			};
+			try {
+				document.getElementById("game").contentWindow.SGAME.loadSettings(settings);
+			} catch (e){ }
 		});
 	});
 </script>

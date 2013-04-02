@@ -1,4 +1,3 @@
-var global;
 /**
  * SGAME JavaScript API
  * Integrate SCORM into web games
@@ -37,6 +36,99 @@ SGAME = (function(undefined){
 	}) ();
 
 
+	//////////////
+	// iso8601 parser
+	//////////////
+	/*
+	* Provided by https://github.com/nezasa/iso8601-js-period/blob/master/iso8601.js
+	* Shared and maintained by [Nezasa](http://www.nezasa.com)
+	* Published under [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0.html)
+	* © Nezasa, 2012-2013
+	*
+	* Javascript library for parsing of ISO 8601 durations. Supported are durations of
+	* the form P3Y6M4DT12H30M17S or PT1S or P1Y4DT1H3S etc.
+	*
+	* @author Nezasa AG -- https://github.com/nezasa
+	* @contributor Jason "Palamedes" Ellis -- https://github.com/palamedes
+	*/
+
+	var iso8601Parser = (function(undefined){
+
+		var getDuration = function(period){
+			var multiplicators = [ 31104000,2592000,604800,86400,3600,60,1];
+			/*
+				var multiplicators = [year (360*24*60*60),month (30*24*60*60),
+            	week (24*60*60*7),day (24*60*60),hour (60*60),minute (60),second (1)];
+            */
+
+            try {
+            	var durationPerUnit = _parsePeriodString(period);
+            } catch (e){
+            	return null;
+            }
+			
+			var durationInSeconds = 0;
+			for (var i = 0; i < durationPerUnit.length; i++) {
+				durationInSeconds += durationPerUnit[i] * multiplicators[i];
+			}
+
+			return durationInSeconds;
+		}
+
+	   /**
+		* Parses a ISO8601 period string.
+		* @param period iso8601 period string
+		* @param _distributeOverflow if 'true', the unit overflows are merge into the next higher units.
+		*/
+	    function _parsePeriodString(period, _distributeOverflow) {
+
+	        var distributeOverflow = (_distributeOverflow) ? _distributeOverflow : false;
+	        var valueIndexes = [2, 3, 4, 5, 7, 8, 9];
+	        var duration = [0, 0, 0, 0, 0, 0, 0];
+	        var overflowLimits = [0, 12, 4, 7, 24, 60, 60];
+	        var struct;
+
+	        // upcase the string just in case people don't follow the letter of the law
+	        period = period.toUpperCase();
+
+	        // input validation
+	        if (!period) {
+	        	return duration;
+			} else if (typeof period !== "string"){
+				throw new Error("Invalid iso8601 period string '" + period + "'");
+			} 
+
+	        // parse the string
+	        if (struct = /^P((\d+Y)?(\d+M)?(\d+W)?(\d+D)?)?(T(\d+H)?(\d+M)?(\d+S)?)?$/.exec(period)) {
+	            // remove letters, replace by 0 if not defined
+	            for (var i = 0; i < valueIndexes.length; i++) {
+	                var structIndex = valueIndexes[i];
+	                duration[i] = struct[structIndex] ? +struct[structIndex].replace(/[A-Za-z]+/g, '') : 0;
+	            }
+	        } else {
+	            throw new Error("String '" + period + "' is not a valid ISO8601 period.");
+	        }
+
+	        if (distributeOverflow) {
+	            // note: stop at 1 to ignore overflow of years
+	            for (var i = duration.length - 1; i > 0; i--) {
+	                if (duration[i] >= overflowLimits[i]) {
+	                    duration[i-1] = duration[i-1] + Math.floor(duration[i]/overflowLimits[i]);
+	                    duration[i] = duration[i] % overflowLimits[i];
+	                }
+	            }
+	        }
+
+	        return duration;
+	    };
+
+		return {
+			getDuration	: getDuration
+		};
+
+	}) ();
+
+
 	///////////
 	// Fancybox
 	//////////
@@ -55,6 +147,7 @@ SGAME = (function(undefined){
 			var width = 850;
 			var height = 650;
 			var url;
+			var LOmetadata = {};
 
 			if(options){
 				if(options.width){
@@ -65,6 +158,9 @@ SGAME = (function(undefined){
 				}
 				if(options.url){
 					url = options.url;
+				}
+				if(options.LOmetadata){
+					LOmetadata = options.LOmetadata;
 				}
 			}
 
@@ -123,7 +219,7 @@ SGAME = (function(undefined){
 			fancybox.appendChild(iframe);
 
 			//Add observer
-			observer.start(iframe);
+			observer.start(iframe,LOmetadata);
 
 			_currentFancybox = fancybox;
 			document.body.appendChild(fancybox);
@@ -154,21 +250,28 @@ SGAME = (function(undefined){
 	var observer = (function(undefined){
 
 		var _currentIframe = undefined;
+		var _currentLOmetadata = undefined;
 		var _eventsLoaded = false;
 
 		//Params
 		var startTime;
 		var success;
 
-		var start = function(iframe){
+		var start = function(iframe,LOmetadata){
 			if(iframe){
 				_loadEvents();
 				_currentIframe = iframe;
+				_currentLOmetadata = LOmetadata;
 
 				//Reset params
 				startTime = Date.now();
 				success = false;
 			}
+		}
+
+		var stop = function(){
+			_currentIframe = undefined;
+			_currentLOmetadata = undefined;
 		}
 
 		var _loadEvents = function(){
@@ -187,11 +290,12 @@ SGAME = (function(undefined){
 		}
 
 		var getReport = function(){
-			var timeSpent = Math.round((Date.now() - startTime)/1000);
+			if(!_currentIframe){
+				return null;
+			}
 
-			//First version
-			//Success only depends of timeSpent
-			success = timeSpent > 3;
+			var timeSpent = Math.round((Date.now() - startTime)/1000);
+			success = _callOracle({timeSpent: timeSpent});
 
 			var report = {
 				time: timeSpent,
@@ -201,8 +305,49 @@ SGAME = (function(undefined){
 			return report;
 		}
 
+		var _callOracle = function(info){
+			var minLOtime = 5;
+			var maxLOtime = 10;
+
+			if(_currentLOmetadata){
+				//Future Work (LMS API)
+				//Check if the LO must be evaluated based on time or based on assessments
+
+				//Fist version: always evaluated based on time
+
+				//Get Typical Learning Time in seconds
+				var TLT = _getTypicalLearningTime(_currentLOmetadata);
+
+				//Success when the student spent more than 25% of the TLT time
+				//A maximum value of 10 seconds and a minimum value of 5 seconds are considered
+				return info.timeSpent > Math.max(Math.min(0.25*TLT,maxLOtime),minLOtime);
+			}
+			return info.timeSpent > minLOtime;
+		}
+
+		var _getTypicalLearningTime = function(metadata){
+			if(metadata.educational){
+				if(metadata.educational.typicalLearningTime){
+					if(metadata.educational.typicalLearningTime.duration){
+						if(metadata.educational.typicalLearningTime.duration.langstrings){
+							if(metadata.educational.typicalLearningTime.duration.langstrings["x-none"]){
+								var TLT = metadata.educational.typicalLearningTime.duration.langstrings["x-none"];
+								var parsedTLT = iso8601Parser.getDuration(TLT);
+								if(parsedTLT){
+									//parsedTLT will be null if is not a valid ISO 8601 duration
+									return parsedTLT;
+								}
+							}
+						}
+					}
+				}
+			}
+			return null;
+		}
+
 		return {
 			start		: start,
+			stop		: stop,
 			getReport	: getReport
 		};
 
@@ -279,17 +424,12 @@ SGAME = (function(undefined){
 		}
 	};
 
-
 	var _showLO = function(options,callback){
-		var loId;
-		if(typeof options == "object"){
-			if(options["lo_id"]){
-				//TODO: get lo with this id
-			} else {
-				//[...]
-			}
+		if((typeof options == "object")&&(typeof options["lo_id"] === "number")){
+			_renderLO(options["lo_id"],callback);
+		} else {
+			_renderLO(undefined,callback);
 		}
-		_renderLO(loId,callback);
 	};
 
 
@@ -297,18 +437,54 @@ SGAME = (function(undefined){
 	// Utils
 	//////////////
 
+	var _requestLOMetadata = function(loId,successCallback,failCallback){
+		var serverAPIurl;
+
+		if(!loId){
+			//Random
+			serverAPIurl = "";
+		} else {
+			serverAPIurl = "/lo/" + loId + "/metadata.json";
+		}
+
+		try{
+			_XMLHttprequest(serverAPIurl,function(data){
+				successCallback(data);
+			});
+		} catch (e){
+			failCallback(e);
+		}
+	}
+
+	var _XMLHttprequest = function(url,callback){
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function(){
+			if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+        		var data = JSON.parse(xmlHttp.responseText);
+        		callback(data);
+    		}
+		};
+		xmlHttp.open("GET", url, true);
+		xmlHttp.send("");
+	}
+
 	var _renderLO = function(loId,callback){
 		_togglePause();
 
-		//TODO: get LO metadata
-
-		fancybox.create({ url: "/lo/" + loId}, function(report){
-			deb.log("LO report");
-			deb.log(report);
-			if(typeof callback == "function"){
-				callback(report.success);
-				_togglePause();
-			}
+		_requestLOMetadata(loId, function(metadata){
+			//Success
+			fancybox.create({ url: metadata.url, LOmetadata: metadata}, function(report){
+				deb.log("LO report");
+				deb.log(report);
+				if(typeof callback == "function"){
+					callback(report.success,report);
+					_togglePause();
+				}
+			});
+		}, function(){
+			//Fail
+			_togglePause();
+			callback(true,null);
 		});
 	}
 
@@ -316,9 +492,19 @@ SGAME = (function(undefined){
 		if(typeof box == "number"){
 			return box; //one single element
 		} else {
-			//TODO: random
-			return box[0];
+			return box[_generateRandomNumber(0,box.length-1)];
 		}
+	}
+
+	/*
+	 *	Generate a random number in the [a,b] interval
+	 */
+	var _generateRandomNumber = function(a,b){
+		if((typeof a != "number")||(typeof b != "number")){
+			throw { name: "Invalid number format exception" };
+		}
+
+		return Math.round(a + Math.random()*(b-a));
 	}
 
 	var _togglePause = function(){

@@ -56,13 +56,13 @@ Demo::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  match "games/templates/oarena" => redirect("games/templates/oarena/")
-
-
   resources :scorm_file
   resources :lo
   resources :game
   resources :game_template
   root :to => 'game#new'
+
+  #Metadata
+  match 'lo/:id/metadata' => 'lo#metadata'
 
 end
