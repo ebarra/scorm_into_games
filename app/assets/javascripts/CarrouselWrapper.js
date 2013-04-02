@@ -350,7 +350,7 @@ CarrouselWrapper = (function($,undefined){
 		$.each(imagesArray, function(i, image) {
 			if((titleArray)&&(titleArray[imagesArray.indexOf(image)])){
 				var title = titleArray[imagesArray.indexOf(image)];
-				$("#" + carrouselDivId).append("<div><p>"+title+"</p>" + _getOuterHTML(image) + "</div>");
+				$("#" + carrouselDivId).append("<div><p title='"+title+"'>"+title+"</p>" + _getOuterHTML(image) + "</div>");
 			} else {
 				$("#" + carrouselDivId).append('<div>' + _getOuterHTML(image) + '</div>');
 			}
