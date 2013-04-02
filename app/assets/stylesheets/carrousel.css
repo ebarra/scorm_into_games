@@ -52,7 +52,7 @@ a.prev:hover {
   background-position: 0 -50px; 
 }
 a.prev.disabled {   
-  background-position: 0 -100px !important;  
+  background-position: 0 -99px !important;  
 }
 
 a.next {  

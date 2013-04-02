@@ -98,10 +98,12 @@ img.logo {
   padding: 5px;
 }
 
-.plus{
-  position: absolute;
+.plus {
+  width: 50px;
+  position: fixed;
   top: 510px;
-  left: 745px;
+  left: 50%;
+  margin-left: -25px;
 }
 
 .carrousel_wrapper{
@@ -207,7 +209,8 @@ ul#lo_list li {
   background: #046598;
   position: absolute;
   top: 710px;
-  left: 710px;
+  left: 50%;
+  margin-left: -50px;
   font-size: 20px;
   text-align: center;
   color: white;
@@ -225,7 +228,7 @@ ul#lo_list li {
 }
 
 #fancybox-content{
-  background: #046598;
+  /*background: #046598;*/
 }
 
 #form_scorm_title{
