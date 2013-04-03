@@ -243,24 +243,24 @@ div.image_carousel_single_row_gallery img{
     display: block;
     float: left;
     border: 1px solid white;
-    width: 135px;
-    height: 135px;
+    width: 140px;
+    height: 140px;
 }
 
 div.carrousel_element_single_row_gallery{
-  width: 135px;
-  height: 135px;
-  max-width: 135px;
-  max-height: 135px;
+  width: 140px;
+  height: 140px;
+  max-width: 143px;
+  max-height: 143px;
   float: left;
-  margin-left: 43px;
+  margin-left: 37px;
 }
 
 p.carrousel_element_single_row_gallery{
   margin: 0px;
-  max-width: 134px;
+  max-width: 139px;
   max-height: 20px;
-  margin-left: -67px;
+  margin-left: -104px;
   text-align: center;
   font-size: 16px;
   font-family: Helvetica;
@@ -271,7 +271,7 @@ p.carrousel_element_single_row_gallery{
 }
 
 div.carrousel_element_single_row_gallery > img.carrousel_element_single_row_gallery {
-  margin-left: -59px;
+  margin-left: -107px;
 }
 
 a.prev_single_row_gallery, a.next_single_row_gallery {
@@ -280,7 +280,11 @@ a.prev_single_row_gallery, a.next_single_row_gallery {
 
 /** ADD style to pagination class (Optional) */
 div.pagination_single_row_gallery {
-  margin-top: 34px;
+  margin-top: 40px;
   margin-bottom: 15px;
+}
+
+div.game_gallery > div.carrousel_wrapper{
+  padding-bottom: 45px;
 }
 

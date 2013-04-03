@@ -1,5 +1,6 @@
+var catalog = {};
+
 SGAME_WEB = (function($,undefined){
-	var catalog = {};
 	catalog.games = {};
 	catalog.sfs = {};
 
@@ -20,6 +21,11 @@ SGAME_WEB = (function($,undefined){
 
 	var initGallery = function(){
 		_requestGames(_createGalleryCarrousel);
+
+		$("#closeGameIframe").click(function(){
+			$("#closeGameIframe").hide();
+			$("#gameInstance").attr("src","");
+		});
 	}
 
 	var _createFancybox = function(){
@@ -59,20 +65,6 @@ SGAME_WEB = (function($,undefined){
 			catalog.games[game.id] = game;
 		});
 
-
-$.each(games, function(i, game) {
-			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
-			carrouselImages.push($(myImg)[0]);
-			carrouselImagesTitles.push(game.name);
-			catalog.games[game.id] = game;
-		});
-$.each(games, function(i, game) {
-			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
-			carrouselImages.push($(myImg)[0]);
-			carrouselImagesTitles.push(game.name);
-			catalog.games[game.id] = game;
-		});
-
 		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onGalleryImagesLoaded,games_carrousel_id,carrouselImagesTitles);
 	}
 
@@ -92,13 +84,11 @@ $.each(games, function(i, game) {
 		$("#" + games_carrousel_id).show();
 		var options = new Array();
 		options['rows'] = 1;
-		options['callback'] = _onGameSelected;
+		options['callback'] = _onGameSelectedInGallery;
 		options['rowItems'] = 6;
-		options["width"] = 1000;
+		options["width"] = 1100;
 		options['styleClass'] = "gallery";
 		CarrouselWrapper.createCarrousel(games_carrousel_id, options);
-
-		_previewGame(catalog.games[Object.keys(catalog.games)[0]]); //Preview first game
 	}
 
 	/* sfs is an array with scorm_files
@@ -183,7 +173,7 @@ $.each(games, function(i, game) {
 		$.ajax({
 			async: false,
 			type: 'GET',
-			url: '/game_template.json',
+			url: '/game.json',
 			dataType: 'json',
 			success: function(data) {
 				if(typeof successCallback == "function"){
@@ -217,6 +207,15 @@ $.each(games, function(i, game) {
 		}
 	}
 
+	var _onGameSelectedInGallery = function(event){
+		var itemid = $(event.target).attr("itemid");
+		if(itemid!==undefined){
+			var id = parseInt(itemid);
+			var game = catalog.games[id];
+			_renderGameInstance(game);
+		}
+	}
+
 	var _onSFSelected = function(event){
 		var itemid = $(event.target).attr("itemid");
 		if(itemid!==undefined){
@@ -240,7 +239,14 @@ $.each(games, function(i, game) {
 		$("#game_description").html(game.description);
 	}
 
+	var _renderGameInstance = function(game){
+		current_game = game;
+		$("#gameInstance").attr("src","/game/"+game.id);
+		$("#closeGameIframe").show();
+	}
+
 	var _triggerFacyboxToUploadNewGame = function(game){
+		//TODO
 		// console.log("New game");
 	}
 

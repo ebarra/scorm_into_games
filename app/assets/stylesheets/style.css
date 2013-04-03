@@ -20,11 +20,10 @@ body {
   background: #046598;
   color: white;
   font-family: Helvetica, Serif;
-  overflow: hidden;
 }
 
 .header{
-  width: 1000px;
+  width: 1100px;
   height: 90px;
   margin-top: 20px;
   margin-left: auto;
@@ -81,8 +80,8 @@ img.logo {
 
 .game_gallery{
   width: 1100px;
-  height: 100%;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -106,10 +105,18 @@ img.logo {
 
 .plus {
   width: 50px;
-  position: fixed;
+  position: absolute;
   top: 510px;
   left: 50%;
   margin-left: -25px;
+}
+
+#closeGameIframe{
+  width: 24px;
+  position: absolute;
+  top: 382px;
+  left: 50%;
+  margin-left: 532px;
 }
 
 .carrousel_wrapper{
@@ -277,4 +284,9 @@ ul#lo_list li {
 #fancybox-right span{
   right: 20px;
   left: auto;
+}
+
+#gameInstance{
+  border: none;
+  border-style: none;
 }
