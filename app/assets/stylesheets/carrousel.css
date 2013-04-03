@@ -6,9 +6,16 @@ div.caroufredsel_wrapper{
   overflow: visible !important;
 }
 
-div.image_carousel {
+div.image_carousel_single_row_game {
     position: relative;
     width: 540px;
+    overflow: hidden;
+    margin-left: 0px;
+}
+
+div.image_carousel_single_row_gallery {
+    position: relative;
+    width: 1100px;
     overflow: hidden;
     margin-left: 0px;
 }
@@ -218,4 +225,62 @@ div.pagination_single_row_game {
   margin-bottom: 15px;
 }
 
+
+
+/* CSS for Gallery Carrousel */
+
+div.image_carousel_single_row_gallery {
+  padding: 5px 0 0px 0px;
+}
+
+div.image_carousel_single_row_gallery > div.caroufredsel_wrapper {
+  margin-left: 83px !important;
+}
+
+div.image_carousel_single_row_gallery img{
+    background-color: black;
+    margin: 6px;
+    display: block;
+    float: left;
+    border: 1px solid white;
+    width: 135px;
+    height: 135px;
+}
+
+div.carrousel_element_single_row_gallery{
+  width: 135px;
+  height: 135px;
+  max-width: 135px;
+  max-height: 135px;
+  float: left;
+  margin-left: 43px;
+}
+
+p.carrousel_element_single_row_gallery{
+  margin: 0px;
+  max-width: 134px;
+  max-height: 20px;
+  margin-left: -67px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 1px;
+}
+
+div.carrousel_element_single_row_gallery > img.carrousel_element_single_row_gallery {
+  margin-left: -59px;
+}
+
+a.prev_single_row_gallery, a.next_single_row_gallery {
+  top: 73px;
+}
+
+/** ADD style to pagination class (Optional) */
+div.pagination_single_row_gallery {
+  margin-top: 34px;
+  margin-bottom: 15px;
+}
 

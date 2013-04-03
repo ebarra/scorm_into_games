@@ -9,11 +9,17 @@ SGAME_WEB = (function($,undefined){
 	var games_carrousel_id = "games_carrousel";
 	var sf_carrousel_id = "lo_carrousel";
 
+	var gallery = false;
+
 	var init = function (){
 		_createFancybox();
 		_requestScormFiles(_createScormFilesCarrousel);
 		_requestGameTemplates(_createGameCarrousel);
 		_loadEvents();
+	}
+
+	var initGallery = function(){
+		_requestGames(_createGalleryCarrousel);
 	}
 
 	var _createFancybox = function(){
@@ -27,11 +33,6 @@ SGAME_WEB = (function($,undefined){
 			'hideOnContentClick': false,
 			'showCloseButton': true
 		});
-	};
-
-	var _createCarrousels = function(data){
-		_createGameCarrousel(data.games);
-		_createSFCarrousel(data.los);
 	};
 
 	var _createGameCarrousel = function(games){
@@ -48,6 +49,33 @@ SGAME_WEB = (function($,undefined){
 		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onGameImagesLoaded,games_carrousel_id,carrouselImagesTitles);
 	}
 
+	var _createGalleryCarrousel = function(games){
+		var carrouselImages = [];
+		var carrouselImagesTitles = [];
+		$.each(games, function(i, game) {
+			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
+			carrouselImages.push($(myImg)[0]);
+			carrouselImagesTitles.push(game.name);
+			catalog.games[game.id] = game;
+		});
+
+
+$.each(games, function(i, game) {
+			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
+			carrouselImages.push($(myImg)[0]);
+			carrouselImagesTitles.push(game.name);
+			catalog.games[game.id] = game;
+		});
+$.each(games, function(i, game) {
+			var myImg = $("<img itemId="+game.id+" src="+game.avatar_url+" />");
+			carrouselImages.push($(myImg)[0]);
+			carrouselImagesTitles.push(game.name);
+			catalog.games[game.id] = game;
+		});
+
+		CarrouselWrapper.loadImagesOnCarrouselOrder(carrouselImages,_onGalleryImagesLoaded,games_carrousel_id,carrouselImagesTitles);
+	}
+
 	var _onGameImagesLoaded = function(){
 		$("#" + games_carrousel_id).show();
 		var options = new Array();
@@ -55,6 +83,19 @@ SGAME_WEB = (function($,undefined){
 		options['callback'] = _onGameSelected;
 		options['rowItems'] = 3;
 		options['styleClass'] = "game";
+		CarrouselWrapper.createCarrousel(games_carrousel_id, options);
+
+		_previewGame(catalog.games[Object.keys(catalog.games)[0]]); //Preview first game
+	}
+
+	var _onGalleryImagesLoaded = function(){
+		$("#" + games_carrousel_id).show();
+		var options = new Array();
+		options['rows'] = 1;
+		options['callback'] = _onGameSelected;
+		options['rowItems'] = 6;
+		options["width"] = 1000;
+		options['styleClass'] = "gallery";
 		CarrouselWrapper.createCarrousel(games_carrousel_id, options);
 
 		_previewGame(catalog.games[Object.keys(catalog.games)[0]]); //Preview first game
@@ -120,6 +161,25 @@ SGAME_WEB = (function($,undefined){
 	};
 
 	var _requestGameTemplates = function(successCallback,failCallback){
+		$.ajax({
+			async: false,
+			type: 'GET',
+			url: '/game_template.json',
+			dataType: 'json',
+			success: function(data) {
+				if(typeof successCallback == "function"){
+					successCallback(data);
+				}
+			},
+			error: function(xhr, ajaxOptions, thrownError){
+				if(typeof failCallback == "function"){
+					failCallback(xhr, ajaxOptions, thrownError);
+				}
+			}
+		});
+	}
+
+	var _requestGames = function(successCallback,failCallback){
 		$.ajax({
 			async: false,
 			type: 'GET',
@@ -263,7 +323,8 @@ SGAME_WEB = (function($,undefined){
 	}
 
 	return {
-		init : init
+		init 		: init,
+		initGallery : initGallery
 	};
 
 }) (jQuery);
