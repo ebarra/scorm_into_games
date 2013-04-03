@@ -109,7 +109,7 @@ function Game() {
             });
         }
         if(_map.Catched) {
-            SGAME.triggerLO(1,function(pass){
+            SGAME.showLO(function(pass){
                 if(!pass){
                     $("#devil-dead").show();
                     $(document).unbind('keyup');

@@ -16,8 +16,11 @@ class LoController < ApplicationController
     end
   end
 
-  def get_random
-
+  def random_metadata
+    @lo = Lo.random
+    respond_to do |format|
+      format.json { render :json => @lo.delivered_metadata }
+    end
   end
 
 end

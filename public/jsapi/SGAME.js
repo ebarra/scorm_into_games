@@ -213,7 +213,8 @@ SGAME = (function(undefined){
 			iframe.style.marginLeft = "2.5%";
 			iframe.style.marginTop = "30px";
 			iframe.style.overflow = "hidden";
-			iframe.scrolling = "no";
+			iframe.style.overflowY = "scroll";
+			iframe.scrolling = "yes";
 			iframe.style.frameBorder = "0";
 			iframe.style.borderStyle="none";
 			fancybox.appendChild(iframe);
@@ -366,6 +367,7 @@ SGAME = (function(undefined){
 	//vars
 	var _settings;
 	var _event_mapping = {};
+	var _los = [];
 	var _togglePauseFunction = undefined;
 
 
@@ -394,6 +396,12 @@ SGAME = (function(undefined){
 		deb.log(settings);
 		_settings = settings;
 
+		if(settings.lo_list){
+			_los = settings.lo_list;
+		} else {
+			_los = [null];
+		}
+
 		if(settings.event_mapping){
 			for(var i=0;i<settings.event_mapping.length;i++){
 				_event_mapping[settings.event_mapping[i].event_id] = {};
@@ -403,9 +411,14 @@ SGAME = (function(undefined){
 	}
 
 	var triggerLO = function(event_id,callback){
+		var loId;
 		var los_candidate = _event_mapping[event_id].los;
 		if(los_candidate){
-			var loId = _randomChoice(los_candidate);
+			if(los_candidate.indexOf("*") != -1){
+				loId = _randomChoice(_los);
+			} else {
+				loId = _randomChoice(los_candidate);
+			}
 			_renderLO(loId,callback);
 		}
 	};
@@ -441,8 +454,7 @@ SGAME = (function(undefined){
 		var serverAPIurl;
 
 		if(!loId){
-			//Random
-			serverAPIurl = "";
+			serverAPIurl = "/lo/random/metadata.json";
 		} else {
 			serverAPIurl = "/lo/" + loId + "/metadata.json";
 		}
@@ -531,10 +543,10 @@ SGAME.URL = "http://github.com/ebarra/scorm_into_games";
 
 //Constants
 SGAME.EVENT = {};
-SGAME.EVENT.GENERIC = 0;
-SGAME.EVENT.EXTRA_LIFE = 1;
-SGAME.EVENT.EXTRA_SKILL = 2;
-SGAME.EVENT.EXTRA_ITEM = 3;
-SGAME.EVENT.BLOCKER = 4;
-SGAME.EVENT.CHEAT = 5;
-SGAME.EVENT.CONTINUE = 6;
+SGAME.EVENT.GENERIC = "generic";
+SGAME.EVENT.EXTRA_LIFE = "extra_life";
+SGAME.EVENT.EXTRA_SKILL = "extra_skill";
+SGAME.EVENT.EXTRA_ITEM = "extra_item";
+SGAME.EVENT.BLOCKER = "blocker";
+SGAME.EVENT.CHEAT = "cheat";
+SGAME.EVENT.CONTINUE = "continue";

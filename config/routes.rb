@@ -62,6 +62,9 @@ Demo::Application.routes.draw do
   resources :game_template
   root :to => 'game#new'
 
+  #Get Metadata of a random LO
+  match 'lo/random/metadata' => 'lo#random_metadata'
+
   #Metadata
   match 'lo/:id/metadata' => 'lo#metadata'
 

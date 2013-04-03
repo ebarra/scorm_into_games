@@ -21,11 +21,22 @@ class Game < ActiveRecord::Base
 	def los
 		los = [];
 		self.event_mappings.each do |mapping|
-			unless los.include?mapping.lo
+			unless los.include?mapping.lo or mapping.lo == nil
 				los.push(mapping.lo);
 			end
 		end
 		return los;
+	end
+
+	def lo_id_list
+		lo_id_list = [];
+		los = self.los;
+		los.each do |lo|
+			unless lo.id == -1 or lo.id == -2
+				lo_id_list.push(lo.id);
+			end
+		end
+		return lo_id_list;
 	end
 
 
@@ -34,11 +45,12 @@ class Game < ActiveRecord::Base
 		settings["name"]=self.name;
 		settings["description"]=self.description;
 		settings["avatar"]=self.avatar_url;
+		settings["lo_list"] = self.lo_id_list;
 		settings["event_mapping"] = [];
 
 		event_ids = [];
 		self.event_mappings.each do |mapping|
-			unless event_ids.include?mapping.game_template_event_id
+			unless event_ids.include?mapping.game_template_event_id or mapping.game_template_event_id==-1
 				event_ids.push(mapping.game_template_event_id);
 			end
 		end
@@ -46,7 +58,11 @@ class Game < ActiveRecord::Base
 		event_ids.each do |event_id|
 			los = [];
 			self.event_mappings.find_all_by_game_template_event_id(event_id).each do |mapping|
-				los.push(mapping.lo_id);
+				if mapping.lo_id == -2
+					los.push("*");
+				else
+					los.push(mapping.lo_id);
+				end
 			end
 			mapping = Hash.new;
 			mapping["event_id"] = event_id;

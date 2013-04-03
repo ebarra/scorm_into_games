@@ -11,45 +11,51 @@ namespace :db do
   	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/hiddencraft.zip'), File.join(Rails.root, 'public/scorm/3/hiddencraft.zip'))
 
   	#first scrom file with its learning object
-	sf = ScormFile.create!  :name  => "Rabbittakeaway",
+	sf1 = ScormFile.create!  :name  => "Rabbittakeaway",
 	                        :description   => "Minigame to learn maths with rabbits",
 	                        :avatar_url => "http://www.rabbittakeaway.co.uk/rabbittakeaway_300.jpg",
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/1/rabbittakeaway.zip'))
 
 	#second scrom file with its learning object
-	sf = ScormFile.create!  :name  => "Golf",
+	sf2 = ScormFile.create!  :name  => "Golf",
 	                        :description   => "SCORM package that explains everything about golf",
 	                        :avatar_url => "http://www.chester.com/images/golf/golf3.jpg",
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/2/golf_n_sco.zip'))
 
 	#third scrom file with its learning object
-	sf = ScormFile.create!  :name  => "Hiddencraft",
+	sf3 = ScormFile.create!  :name  => "Hiddencraft",
 	                        :description   => "Hiddencraft mini game to learn maths",
 	                        :avatar_url => "/hidden-craft.jpg",
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/3/hiddencraft.zip'))
 
     
 	#now three game templates
-	gt = GameTemplate.create! 	:name=>"Onslaught Arena", 
+	oArena = GameTemplate.create! 	:name=>"Onslaught Arena", 
 								:description=>"Battle hordes of classic medieval monsters in this fast-paced arcade shooter", 
 								:avatar_url=>"/assets/game_OnslaughtArena.jpg"
 
-	gt = GameTemplate.create! 	:name=>"Natural Park", 
+	nPark = GameTemplate.create! 	:name=>"Natural Park", 
 								:description=>"Go meet and feed the lynxes in this park.", 
 								:avatar_url=>"/assets/game_dpark.png"
 
-	gt = GameTemplate.create! 	:name=>"Sokoban", 
+	sokoban = GameTemplate.create! 	:name=>"Sokoban", 
 								:description=>"Sokoban is a type of transport puzzle, in which the player pushes diamonds around in a warehouse", 
 								:avatar_url=>"/assets/game_sokoban.png"
 
-	gte = GameTemplateEvent.create :name=>"Extra weapon", :description=>"Event triggered when the player achieved a new weapon", :event_type=>"extra_weapon", :game_template_id=>GameTemplate.first.id
-	gte.save!
+	#Now the events of the templates
+	oArenaEvent1 = GameTemplateEvent.create! :name=>"Extra weapon", :description=>"Event triggered when the player achieved a new weapon", :event_type=>"extra_weapon", :game_template_id=>oArena.id
+	sokobanEvent1 = GameTemplateEvent.create! :name=>"Extra live", :description=>"Event triggered when the devil catches the player", :event_type=>"extra_life", :game_template_id=>sokoban.id
 
-	g = Game.create :name=>"My instance of Onslaught Arena", :description=>"Game instance example", :avatar_url=>"http://t2.gstatic.com/images?q=tbn:ANd9GcSSBLq0UP6o9Z-WXXDch-lgX3kgX51ivUqp16exYZcD-NGdpSX3Rw", :game_template_id=>GameTemplate.first.id
-	g.save!
+	#Now the games
 
-	em = EventMapping.create :game_id => Game.first.id, :game_template_event_id => GameTemplateEvent.first.id, :lo_id => Lo.first.id
-	em.save!
+	#oArena
+	oArenaInstance = Game.create! :name=>"My instance of Onslaught Arena", :description=>"Game instance example", :avatar_url=>"/assets/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
+
+	#Event mapping for the oArena game
+	Lo.all_ids.each do |lo_id|
+		EventMapping.create :game_id => oArenaInstance.id, :game_template_event_id => -1, :lo_id => lo_id
+	end
+	oArenaInstanceEm1 = EventMapping.create! :game_id => oArenaInstance.id, :game_template_event_id => oArenaEvent1.id, :lo_id => -2 #-2 is the convention for random
 
 	puts "Populate finish"
   end
