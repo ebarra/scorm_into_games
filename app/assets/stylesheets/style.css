@@ -200,6 +200,7 @@ ul#lo_list li {
   min-width: 345px;
   padding:5px;
   vertical-align: middle;
+  text-align: left;
 }
 
 .lo_description{

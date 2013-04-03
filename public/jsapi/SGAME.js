@@ -189,7 +189,7 @@ SGAME = (function(undefined){
 			fancybox.style.marginTop = marginTop + "px";
 
 			//Close button
-			var closeButton = document.createElement('img'); 
+			var closeButton = document.createElement('img');
 			closeButton.src = "/assets/close.png";
 			closeButton.style.width = "25px";
 			closeButton.style.height = "25px";
@@ -200,11 +200,24 @@ SGAME = (function(undefined){
 			closeButton.onclick = function(){
 				_removeCurrentFancybox();
 				if(typeof onCloseCallback === "function"){
-					var report = observer.getReport();
+					var report = observer.stop(); //Stop the observer and get final report
 					onCloseCallback(report);
 				}
 			}
 			fancybox.appendChild(closeButton);
+
+			var semaphore = document.createElement('img');
+			semaphore.id = "semaphore";
+			semaphore.src = "/assets/semaphore/semaphore_red.png";
+			semaphore.style.width = "45px";
+			semaphore.style.height = "40px";
+			semaphore.style.padding = "5px";
+			semaphore.style.position = "absolute";
+			// semaphore.style.right = "-5px";
+			// semaphore.style.top = "32px";
+			semaphore.style.left = "0px";
+			semaphore.style.top = "0px";
+			fancybox.appendChild(semaphore);
 
 			//Iframe
 			var iframe = document.createElement('iframe');
@@ -212,7 +225,7 @@ SGAME = (function(undefined){
 			iframe.style.width = "95%";
 			iframe.style.height = "95%";
 			iframe.style.marginLeft = "2.5%";
-			iframe.style.marginTop = "30px";
+			iframe.style.marginTop = "40px";
 			iframe.style.overflow = "hidden";
 			iframe.style.overflowY = "scroll";
 			iframe.scrolling = "yes";
@@ -220,11 +233,11 @@ SGAME = (function(undefined){
 			iframe.style.borderStyle="none";
 			fancybox.appendChild(iframe);
 
-			//Add observer
-			observer.start(iframe,LOmetadata);
-
 			_currentFancybox = fancybox;
 			document.body.appendChild(fancybox);
+
+			//Add observer
+			observer.start(iframe,LOmetadata);
 		}
 
 		var _removeCurrentFancybox = function(){
@@ -258,6 +271,8 @@ SGAME = (function(undefined){
 		//Params
 		var startTime;
 		var success;
+		//Metadata params
+		var TLT; //Typical Learning Time
 
 		var start = function(iframe,LOmetadata){
 			if(iframe){
@@ -265,15 +280,24 @@ SGAME = (function(undefined){
 				_currentIframe = iframe;
 				_currentLOmetadata = LOmetadata;
 
-				//Reset params
-				startTime = Date.now();
-				success = false;
+				_resetParams();
+
+				//Get Typical Learning Time (in seconds)
+				//null if is not specified in the metadata
+				TLT = _getTypicalLearningTime(_currentLOmetadata);
+
+				var requiredTime = _getRequiredSpentTime();
+				deb.log("Required Time: " + requiredTime);
+				semaphore.changeColor("red");
+				semaphore.setUpBlink("yellow",requiredTime*0.4-0.5,requiredTime*0.6);
+				semaphore.changeColor("green",requiredTime);
 			}
 		}
 
-		var stop = function(){
-			_currentIframe = undefined;
-			_currentLOmetadata = undefined;
+		var _resetParams = function(){
+			startTime = Date.now();
+			success = false;
+			TLT = null;
 		}
 
 		var _loadEvents = function(){
@@ -291,7 +315,10 @@ SGAME = (function(undefined){
 		var _onMessage = function(message){
 		}
 
-		var getReport = function(){
+		/*
+		 * Stop and get report
+		 */
+		var stop = function(){
 			if(!_currentIframe){
 				return null;
 			}
@@ -304,27 +331,16 @@ SGAME = (function(undefined){
 				success: success
 			};
 
+			//Reset params
+			_currentIframe = undefined;
+			_currentLOmetadata = undefined;
+
 			return report;
 		}
 
 		var _callOracle = function(info){
-			var minLOtime = 5;
-			var maxLOtime = 10;
-
-			if(_currentLOmetadata){
-				//Future Work (LMS API)
-				//Check if the LO must be evaluated based on time or based on assessments
-
-				//Fist version: always evaluated based on time
-
-				//Get Typical Learning Time in seconds
-				var TLT = _getTypicalLearningTime(_currentLOmetadata);
-
-				//Success when the student spent more than 25% of the TLT time
-				//A maximum value of 10 seconds and a minimum value of 5 seconds are considered
-				return info.timeSpent > Math.max(Math.min(0.25*TLT,maxLOtime),minLOtime);
-			}
-			return info.timeSpent > minLOtime;
+			var requiredTime = _getRequiredSpentTime();
+			return info.timeSpent > requiredTime;
 		}
 
 		var _getTypicalLearningTime = function(metadata){
@@ -347,10 +363,97 @@ SGAME = (function(undefined){
 			return null;
 		}
 
+		/*
+		 * Success when the student spent more than 25% of the TLT time
+		 * A maximum and a minimum thresholds are considered
+		 */
+		var _getRequiredSpentTime = function(){
+			var minLOtime = 10;
+			var maxLOtime = 30;
+
+			if(!TLT){
+				return minLOtime;
+			}
+
+			return Math.max(Math.min(0.25*TLT,maxLOtime),minLOtime);
+		}
+
 		return {
 			start		: start,
-			stop		: stop,
-			getReport	: getReport
+			stop		: stop
+		};
+
+	}) ();
+
+
+	///////////
+	// Semaphore
+	//////////
+	var semaphore = (function(undefined){
+
+		var changeColor = function(color,delay){
+			if(delay){
+				setTimeout(function(){
+					_changeColor(color);
+				},delay*1000);
+			} else {
+				_changeColor(color);
+			}
+		}
+
+		var _changeColor = function(color){
+			var semaphore = document.getElementById("semaphore");
+			semaphore.src = _getImageForColor(color);
+		}
+
+		var _getImageForColor = function(color){
+			switch(color){
+				case "green":
+					return "/assets/semaphore/semaphore_green.png";
+					break;
+				case "yellow":
+					return "/assets/semaphore/semaphore_yellow.png";
+					break;
+				case "red":
+					return "/assets/semaphore/semaphore_red.png";
+					break;
+				default:
+					return "/assets/semaphore/semaphore.png";
+					break;
+			}
+		}
+
+		var setUpBlink = function(color,duration,delay){
+			if(delay){
+				setTimeout(function(){
+					_blink(color,duration);
+				},delay*1000);
+			} else {
+				_blink(color,duration);
+			}
+		}
+
+		var _blink = function(color,duration){
+			var semaphore = document.getElementById("semaphore");
+			var coin = false;
+			var timer = setInterval(function(){
+				if(coin){
+					semaphore.src = _getImageForColor(null);
+					coin = false;
+				} else {
+					semaphore.src = _getImageForColor(color);
+					coin = true;
+				}
+			},500);
+			setTimeout(function(){
+				clearTimeout(timer);
+			},duration*1000);
+		}
+
+
+		return {
+			changeColor	: changeColor,
+			setUpBlink	: setUpBlink
 		};
 
 	}) ();

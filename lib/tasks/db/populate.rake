@@ -19,7 +19,7 @@ namespace :db do
 	#second scrom file with its learning object
 	sf2 = ScormFile.create!  :name  => "Golf",
 	                        :description   => "SCORM package that explains everything about golf",
-	                        :avatar_url => "http://www.chester.com/images/golf/golf3.jpg",
+	                        :avatar_url => "/golf1.jpg",
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/2/golf_n_sco.zip'))
 
 	#third scrom file with its learning object

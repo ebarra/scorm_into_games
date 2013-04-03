@@ -336,6 +336,7 @@ CarrouselWrapper = (function($,undefined){
 				}
 			})
 			$(image).error(function(response) {
+				console.log("Image loading error");
 				imagesLoaded = imagesLoaded + 1;
 				validImagesArray.splice(validImagesArray.indexOf(image),1);
 				if(imagesLoaded == imagesLength){
