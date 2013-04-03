@@ -68,8 +68,8 @@ function Game() {
         if (this.Initialize()) {
             // if initialization was succesfull, load content
             this.LoadContent();
+            window.focus();
         }
-
     }
 
     this.InitialUpdateRun = function (ev) {
@@ -109,8 +109,10 @@ function Game() {
             });
         }
         if(_map.Catched) {
-            SGAME.showLO(function(pass){
-                if(!pass){
+            SGAME.triggerLO(1,function(pass){
+                if(pass){
+                    _map.removeDevil();
+                } else {
                     $("#devil-dead").show();
                     $(document).unbind('keyup');
                 }

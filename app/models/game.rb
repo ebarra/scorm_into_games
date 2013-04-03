@@ -64,8 +64,9 @@ class Game < ActiveRecord::Base
 					los.push(mapping.lo_id);
 				end
 			end
+			event = GameTemplateEvent.find_by_id(event_id);
 			mapping = Hash.new;
-			mapping["event_id"] = event_id;
+			mapping["event_id"] = event.id_in_game;
 			mapping["los_id"] = los;
 			settings["event_mapping"].push(mapping);
 		end

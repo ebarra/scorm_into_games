@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130323114536) do
     t.string   "name"
     t.string   "description"
     t.string   "event_type"
+    t.integer  "id_in_game"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

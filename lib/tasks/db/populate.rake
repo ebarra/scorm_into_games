@@ -34,28 +34,39 @@ namespace :db do
 								:description=>"Battle hordes of classic medieval monsters in this fast-paced arcade shooter", 
 								:avatar_url=>"/assets/game_OnslaughtArena.jpg"
 
+	sokoban = GameTemplate.create! 	:name=>"Sokoban",
+								:description=>"Sokoban is a type of transport puzzle, in which the player pushes diamonds around in a warehouse", 
+								:avatar_url=>"/assets/game_sokoban.png"
+
 	nPark = GameTemplate.create! 	:name=>"Natural Park", 
 								:description=>"Go meet and feed the lynxes in this park.", 
 								:avatar_url=>"/assets/game_dpark.png"
 
-	sokoban = GameTemplate.create! 	:name=>"Sokoban", 
-								:description=>"Sokoban is a type of transport puzzle, in which the player pushes diamonds around in a warehouse", 
-								:avatar_url=>"/assets/game_sokoban.png"
-
 	#Now the events of the templates
-	oArenaEvent1 = GameTemplateEvent.create! :name=>"Extra weapon", :description=>"Event triggered when the player achieved a new weapon", :event_type=>"extra_weapon", :game_template_id=>oArena.id
-	sokobanEvent1 = GameTemplateEvent.create! :name=>"Extra live", :description=>"Event triggered when the devil catches the player", :event_type=>"extra_life", :game_template_id=>sokoban.id
+	oArenaEvent1 = GameTemplateEvent.create! :name=>"Extra weapon", :description=>"Event triggered when the player achieved a new weapon", :event_type=>"extra_weapon", :game_template_id=>oArena.id, :id_in_game=>1
+	sokobanEvent1 = GameTemplateEvent.create! :name=>"Extra live", :description=>"Event triggered when the devil catches the player", :event_type=>"extra_life", :game_template_id=>sokoban.id, :id_in_game=>1
 
 	#Now the games
 
 	#oArena
-	oArenaInstance = Game.create! :name=>"My instance of Onslaught Arena", :description=>"Game instance example", :avatar_url=>"/assets/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
+	oArenaInstance = Game.create! :name=>"My instance of Onslaught Arena", :description=>"Onslaught Arena instance example", :avatar_url=>"/assets/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
 
 	#Event mapping for the oArena game
 	Lo.all_ids.each do |lo_id|
 		EventMapping.create :game_id => oArenaInstance.id, :game_template_event_id => -1, :lo_id => lo_id
 	end
-	oArenaInstanceEm1 = EventMapping.create! :game_id => oArenaInstance.id, :game_template_event_id => oArenaEvent1.id, :lo_id => -2 #-2 is the convention for random
+	EventMapping.create! :game_id => oArenaInstance.id, :game_template_event_id => oArenaEvent1.id, :lo_id => -2 #-2 is the convention for random
+
+
+	#sokoban
+	sokobanInstance = Game.create! :name=>"My instance of Sokoban", :description=>"Sokoban instance example", :avatar_url=>"/assets/devilAvatar.gif", :game_template_id=>sokoban.id
+	
+	#Event mapping for the sokoban game
+	Lo.all_ids.each do |lo_id|
+		EventMapping.create :game_id => sokobanInstance.id, :game_template_event_id => -1, :lo_id => lo_id
+	end
+	EventMapping.create! :game_id => sokobanInstance.id, :game_template_event_id => sokobanEvent1.id, :lo_id => -2 #-2 is the convention for random
+
 
 	puts "Populate finish"
   end

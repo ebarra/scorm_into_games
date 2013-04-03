@@ -22,6 +22,12 @@ function Map(imgRepository) {
         return this._map[this._playerX][this._playerY];
     }
 
+    this.removeDevil = function () {
+        this._devilX = false;
+        this._devilY = false;
+        this.Catched = false;
+    }
+
     this.LoadMap = function (levelNumber) {
         this._map = null;
         this._goals = 0;
@@ -49,6 +55,8 @@ function Map(imgRepository) {
         //check is devil is in the same place
         if((this._playerX == this._devilX) && (this._playerY == this._devilY) ){
         	this.Catched = true;
+        } else {
+            this.Catched = false;
         }
         	
         _levelStatistics.Update();
