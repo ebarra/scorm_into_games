@@ -1,26 +1,28 @@
-<div id="form_scorm_title">
-Upload new scorm package
+<div id="form_scorm_wrapper">
+  <div id="form_scorm_title">
+  Upload new scorm package
+  </div>
+
+  <%= form_for(:scorm_file, :html => {:multipart => true, :id=>"form_scorm"}, :url => "/scorm_file") do |f| %>
+    <label class="text_label" for="description">
+      <%= f.label "Description" %>
+    </label>
+    <div class="">
+      <%= f.text_area :description, :class => "", :rows => 5 %>
+    </div>
+    <label class="text_label" for="avatar">
+      <%= f.label "Avatar" %>
+    </label>
+    <div class="">
+        <%= f.text_field :avatar_url, :class => "" %>
+    </div>
+
+    <label class="text_label" for="source">
+      <%= f.label "Scorm File" %>
+    </label>
+    <%= f.file_field :source %><br/><br/>
+
+
+    <%= f.submit "Upload", :class => "btn", :id => "upload_scorm_button" %>
+  <%end%>
 </div>
-
-<%= form_for(:scorm_file, :html => {:multipart => true, :id=>"form_scorm"}, :url => "/scorm_file") do |f| %>
-  <label class="text_label" for="description">
-    <%= f.label "Description" %>
-  </label>
-  <div class="">
-    <%= f.text_area :description, :class => "", :rows => 5 %>
-  </div>
-  <label class="text_label" for="avatar">
-    <%= f.label "Avatar" %>
-  </label>
-  <div class="">
-      <%= f.text_field :avatar_url, :class => "" %>
-  </div>
-
-  <label class="text_label" for="source">
-    <%= f.label "Scorm File" %>
-  </label>
-  <%= f.file_field :source %><br/><br/>
-
-
-  <%= f.submit "Upload", :class => "btn", :id => "upload_scorm_button" %>
-<%end%>

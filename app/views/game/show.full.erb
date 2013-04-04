@@ -1,9 +1,9 @@
-<!-- <html>
+<html>
 <head>
 	<script src="/assets/application.js"></script>
 	<title><%=@game.name%></title>
 </head>
-<body> -->
+<body>
 <script>
 	var settings = JSON.parse('<%=@settings.to_json.html_safe%>');
 
@@ -15,8 +15,5 @@
 		});
 	});
 </script>
-<div class="carrousel_title">
-	<p class="carrousel_title_text"> <%=@game.name%> </p>
-</div>
-<iframe id="game" src='<%=@template_url%>' width="99.8%"; height="720px"></iframe>
+<iframe id="game" src='<%=@template_url%>' width="99.8%"; height="97%"></iframe>
 </body>

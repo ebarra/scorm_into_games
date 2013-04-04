@@ -49,7 +49,8 @@ class GameController < ApplicationController
     @settings = @game.settings
     @template_url = @game.game_template.get_url
     respond_to do |format|
-      format.html { render :layout => false } # show.html.erb
+      format.html # show.html.erb
+      format.full { render :layout => false }
       format.json { render :json => @settings }
     end
   end

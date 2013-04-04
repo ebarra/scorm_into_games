@@ -55,6 +55,11 @@ img.logo {
 }
 
 .gallery_wrapper{
+  width: 19%;
+  float: left;
+}
+
+.gallery_wrapper:hover{
   width: 20%;
   float: left;
 }
@@ -252,7 +257,11 @@ ul#lo_list li {
 }
 
 #fancybox-content{
-  /*background: #046598;*/
+}
+
+#form_scorm_wrapper{
+  background: white;
+  color: black;
 }
 
 #form_scorm_title{
@@ -287,7 +296,19 @@ ul#lo_list li {
   left: auto;
 }
 
+#fancybox-left-ico, #fancybox-right-ico{
+  width: 29px;
+}
+
 #gameInstance{
   border: none;
   border-style: none;
+}
+
+#create_form_div{
+  line-height: 0px;
+}
+
+p.createButton{
+  margin-top: 14px;
 }

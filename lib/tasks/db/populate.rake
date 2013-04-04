@@ -49,7 +49,7 @@ namespace :db do
 	#Now the games
 
 	#oArena
-	oArenaInstance = Game.create! :name=>"My instance of Onslaught Arena", :description=>"Onslaught Arena instance example", :avatar_url=>"/assets/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
+	oArenaInstance = Game.create! :name=>"Onslaught Arena Example", :description=>"Onslaught Arena instance example", :avatar_url=>"/assets/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
 
 	#Event mapping for the oArena game
 	Lo.all_ids.each do |lo_id|
@@ -59,7 +59,7 @@ namespace :db do
 
 
 	#sokoban
-	sokobanInstance = Game.create! :name=>"My instance of Sokoban", :description=>"Sokoban instance example", :avatar_url=>"/assets/devilAvatar.gif", :game_template_id=>sokoban.id
+	sokobanInstance = Game.create! :name=>"Sokoban Example", :description=>"Sokoban instance example", :avatar_url=>"/assets/devilAvatar.gif", :game_template_id=>sokoban.id
 	
 	#Event mapping for the sokoban game
 	Lo.all_ids.each do |lo_id|

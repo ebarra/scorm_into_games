@@ -262,6 +262,7 @@ SGAME_WEB = (function($,undefined){
 	var _triggerFacyboxToUploadNewGame = function(game){
 		//TODO
 		// console.log("New game");
+		alert("Upload Game: Service temporarily unavailable");
 	}
 
 	var _triggerFacyboxToUploadNewLO = function(game){
