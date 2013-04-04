@@ -34,5 +34,8 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+#To deploy in background
+gem 'thin'
+
 # To use debugger
 gem 'debugger'
