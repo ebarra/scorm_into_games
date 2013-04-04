@@ -125,7 +125,21 @@ SGAME_WEB = (function($,undefined){
 	 * Events
 	 */
 	 var _loadEvents = function(){
-
+	 	$("#create_form_div").click(function(){
+			if(current_scorm_files.length===0){
+				alert("Select at least one scorm file");
+				return;
+			}
+			else{
+				var scorm_ids_array = [];
+				for (var i = current_scorm_files.length - 1; i >= 0; i--) {
+					scorm_ids_array.push(current_scorm_files[i].id);
+				};
+				$("#scorms_ids").val(JSON.stringify(scorm_ids_array));
+		 		$("#g_template_id").val(current_game.id);
+		 		$("#create_form").submit();
+			}	 		
+	 	});
 	 };
 
 	/**

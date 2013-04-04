@@ -2,11 +2,38 @@
 SUMS Maths Activities - Calculations: Rabbit Takeaway  
 </string></title><language>en</language><description><string language="x-none">This Flash-based activity presents subtraction problems graphically, using animated rabbits: If 4 run away, how many will be left?. Contains two levels of difficulty: Easy (subtraction up to 10) and Harder (up to 20). Suitable for individual work and whole-class demonstrations.</string></description><structure>
 	
-<source>LOMv1.0</source><value>hierarchical</value></structure></general><lifeCycle><!--Lifecycle Section--><status><source>LOMv1.0</source><value>draft</value></status></lifeCycle><metaMetadata><!--Metametadata Section--><identifier><catalog>UK Curriculum Online</catalog><entry>SUMS</entry></identifier><metadataSchema>LOMv1.0</metadataSchema><metadataSchema>SCORM_CAM_v1.3</metadataSchema><language>en</language></metaMetadata><technical><!--Technical Section--><format>Other</format><size>0</size><location>
-SUMSMathsActivitiesCA12_16Jan09</location><!--The following information was removed from a 'type' attribute:--><!--URI--><requirement><orComposite><type><source>LOMv1.0</source><value>browser</value></type><name><source>LOMv1.0</source><value>any</value></name></orComposite></requirement></technical><educational><!--Educational Section--><language>en</language></educational><rights><!--Rights Section--><cost><source>LOMv1.0</source><value>
+<source>LOMv1.0</source><value>hierarchical</value></structure></general><lifeCycle>
+
+<!--Lifecycle Section--><status><source>LOMv1.0</source><value>draft</value></status></lifeCycle><metaMetadata>
+
+
+<!--Metametadata Section--><identifier><catalog>UK Curriculum Online</catalog>
+<entry>SUMS</entry></identifier>
+<metadataSchema>LOMv1.0</metadataSchema><metadataSchema>SCORM_CAM_v1.3</metadataSchema>
+<language>en</language></metaMetadata><technical>
+
+<!--Technical Section-->
+<format>Other</format><size>0</size><location>
+SUMSMathsActivitiesCA12_16Jan09</location>
+
+<!--The following information was removed from a 'type' attribute:-->
+<!--URI--><requirement><orComposite><type><source>LOMv1.0</source>
+<value>browser</value></type>
+<name><source>LOMv1.0</source>
+<value>any</value></name></orComposite></requirement></technical><educational>
+
+<!--Educational Section--><language>en</language></educational><rights>
+
+<!--Rights Section--><cost><source>LOMv1.0</source><value>
 yes
 </value></cost><copyrightAndOtherRestrictions><source>LOMv1.0</source><value>
 yes
 </value></copyrightAndOtherRestrictions><description><string language="x-none">
 Copyright SUMS ONLINE
-</string></description></rights><relation><!--Relations Section--><kind><source>LOMv1.0</source><value>ispartof</value></kind></relation><annotation><!--Annotation Section--><entity>BEGIN:VCARD EMAIL: FN: END:VCARD</entity></annotation></lom>
+</string></description></rights><relation>
+
+
+<!--Relations Section--><kind><source>LOMv1.0</source><value>ispartof</value></kind></relation><annotation>
+
+
+<!--Annotation Section--><entity>BEGIN:VCARD EMAIL: FN: END:VCARD</entity></annotation></lom>
