@@ -68,6 +68,11 @@ namespace :db do
 	EventMapping.create! :game_id => sokobanInstance.id, :game_template_event_id => sokobanEvent1.id, :lo_id => -2 #-2 is the convention for random
 
 
+	#sokoban with SCOs
+	sokobanInstance = Game.create! :name=>"Sokoban SCO", :description=>"Sokoban instance example with SCOs", :avatar_url=>"/assets/scorm_logo.jpg", :game_template_id=>sokoban.id
+	#Event mapping for the sokoban game
+	EventMapping.create! :game_id => sokobanInstance.id, :game_template_event_id => sokobanEvent1.id, :lo_id => sf1.los.first.id
+
 	puts "Populate finish"
   end
 end
