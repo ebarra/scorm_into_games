@@ -8,6 +8,8 @@ class ScormFileController < ApplicationController
 
   def create
     @scorm_file = ScormFile.new(params[:scorm_file])
+    full_name = params[:scorm_file][:source].original_filename
+    @scorm_file.name = full_name[0..full_name.length-5]
     @scorm_file.save!
     respond_to do |format|
       format.all { redirect_to "/" }
