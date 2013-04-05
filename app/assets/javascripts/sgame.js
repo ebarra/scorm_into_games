@@ -39,6 +39,17 @@ SGAME_WEB = (function($,undefined){
 			'hideOnContentClick': false,
 			'showCloseButton': true
 		});
+
+		$("#game_fancybox_link").fancybox({
+			'autoDimensions' : false,
+			'scrolling': 'no',
+			'width': 600,
+			'height': 400,
+			'padding': 0,
+			'hideOnOverlayClick': false,
+			'hideOnContentClick': false,
+			'showCloseButton': true
+		});
 	};
 
 	var _createGameCarrousel = function(games){
@@ -131,15 +142,27 @@ SGAME_WEB = (function($,undefined){
 				return;
 			}
 			else{
-				var scorm_ids_array = [];
+				var scorms_info = "";
 				for (var i = current_scorm_files.length - 1; i >= 0; i--) {
-					scorm_ids_array.push(current_scorm_files[i].id);
+					scorms_info = scorms_info + " " + current_scorm_files[i].name;
 				};
-				$("#scorms_ids").val(JSON.stringify(scorm_ids_array));
-		 		$("#g_template_id").val(current_game.id);
-		 		$("#create_form").submit();
-			}	 		
+				$("#g_template_info").html(current_game.name);
+				$("#scorms_info").html(scorms_info);	
+				$("#game_fancybox_link").click();
+			}
 	 	});
+
+
+	 	$("#submit_game_form").click(function(){
+			var scorm_ids_array = [];
+			for (var i = current_scorm_files.length - 1; i >= 0; i--) {
+				scorm_ids_array.push(current_scorm_files[i].id);
+			};
+			$("#scorms_ids").val(JSON.stringify(scorm_ids_array));
+		 	$("#g_template_id").val(current_game.id);
+		 	$("#create_form").submit();
+	 	});	
+			
 	 };
 
 	/**
@@ -255,7 +278,7 @@ SGAME_WEB = (function($,undefined){
 
 	var _renderGameInstance = function(game){
 		current_game = game;
-		$("#gameInstance").attr("src","/game/"+game.id);
+		$("#gameInstance").attr("src","/game/"+game.id+".full");
 		$("#closeGameIframe").show();
 	}
 

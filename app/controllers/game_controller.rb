@@ -15,8 +15,10 @@ class GameController < ApplicationController
 
   def create
     gT = GameTemplate.find_by_id(params[:g_template_id]);
-    gameInstance = Game.create! :name=>gT.name, :description=>gT.description, :avatar_url=>gT.avatar_url, :game_template_id=>params[:g_template_id]
 
+    name = params[:game][:name] ? params[:game][:name] : gT.name
+    avatar_url = params[:game][:avatar_url] ? params[:game][:avatar_url] : gT.avatar_url    
+    gameInstance = Game.create! :name=>name, :description=>gT.description, :avatar_url=>avatar_url, :game_template_id=>params[:g_template_id]
 
     #Get all LOs
     los = [];

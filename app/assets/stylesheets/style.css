@@ -277,6 +277,24 @@ ul#lo_list li {
   font-size: 15px;
 }
 
+#game_fancybox {
+color: black;
+}
+
+#form_game_title {
+font-size: 30px;
+margin: 30px;
+}
+
+#create_form{
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+.game_form_span{
+  margin-left: 0px;
+  font-weight: bold;
+}
 
 /*to modify fancybox behaviour*/
 #fancybox-title {
