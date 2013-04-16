@@ -185,17 +185,18 @@ ul#lo_list {
 ul#lo_list li {
     display: block;
     min-height: 100px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
 .lo_preview_wrapper{
   float:left;
+  width: 120px;
 }
 
 .lo_preview{
   max-width: 120px;
-  max-height: 120px;
+  max-height: 100px;
   cursor: pointer;
 }
 

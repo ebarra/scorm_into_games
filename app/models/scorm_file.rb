@@ -19,6 +19,10 @@ class ScormFile < ActiveRecord::Base
   	los.select{|lo| lo.scorm_type=="asset"}.collect(&:id)
   end
 
+  def ids
+    los.collect(&:id)
+  end
+
   def extract_scorm_file
   	 Scorm::Package.open(source.path, :cleanup => false) do |pkg|
 	   # Read stuff from the package...
