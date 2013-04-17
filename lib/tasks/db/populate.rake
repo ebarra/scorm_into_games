@@ -17,6 +17,8 @@ namespace :db do
   	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/MedievalArmorQuiz.zip'), File.join(Rails.root, 'public/scorm/6/MedievalArmorQuiz.zip'))
   	Dir.mkdir "#{Rails.root}/public/scorm/7/"
   	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/WeaponsTimelineQuiz.zip'), File.join(Rails.root, 'public/scorm/7/WeaponsTimelineQuiz.zip'))
+  	Dir.mkdir "#{Rails.root}/public/scorm/8/"
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/IberianLynx.zip'), File.join(Rails.root, 'public/scorm/8/IberianLynx.zip'))
 
   	#first scorm file with its learning object
 	sf1 = ScormFile.create!  :name  => "Rabbittakeaway",
@@ -59,6 +61,13 @@ namespace :db do
 	                        :description   => "Weapons Timeline Quiz",
 	                        :avatar_url => "/images/weaponsTimeline.jpg",
 						    :source =>  File.open(File.join(Rails.root, 'public/scorm/7/WeaponsTimelineQuiz.zip'))
+
+	#Iberian Lynx Virtual Excursion
+	sf8 = ScormFile.create!  :name  => "Iberian Lynx",
+	                        :description   => "A Virtual Excursion about the Iberian Lynx",
+	                        :avatar_url => "/images/IberianLynx.jpg",
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/8/IberianLynx.zip'))
+				    				    
 
 	#now three game templates
 	oArena = GameTemplate.create! 	:name=>"Onslaught Arena", 
@@ -118,7 +127,7 @@ namespace :db do
 	nParkInstance = Game.create! :name=>"Natural Park", :description=>"Natural Park Instance", :avatar_url=>"/images/game_dpark.png", :game_template_id=>nPark.id
 	#Event mapping for the nPark game
 
-	(sf2.ids).uniq.each do |lo_id|
+	(sf8.ids).uniq.each do |lo_id|
 		EventMapping.create! :game_id => nParkInstance.id, :game_template_event_id => nParkEvent1.id, :lo_id => lo_id
 	end	
 
