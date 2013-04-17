@@ -10,13 +10,13 @@ namespace :db do
 	Dir.mkdir "#{Rails.root}/public/scorm/3/"
   	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/hiddencraft.zip'), File.join(Rails.root, 'public/scorm/3/hiddencraft.zip'))
   	Dir.mkdir "#{Rails.root}/public/scorm/4/"
-  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/AncientWeaponsDaD.zip'), File.join(Rails.root, 'public/scorm/4/AncientWeaponsDaD.zip'))
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/AncientWeaponsQuiz.zip'), File.join(Rails.root, 'public/scorm/4/AncientWeaponsQuiz.zip'))
   	Dir.mkdir "#{Rails.root}/public/scorm/5/"
-  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/QuizWeaponsImage.zip'), File.join(Rails.root, 'public/scorm/5/QuizWeaponsImage.zip'))
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/WeaponsPicturesQuiz.zip'), File.join(Rails.root, 'public/scorm/5/WeaponsPicturesQuiz.zip'))
   	Dir.mkdir "#{Rails.root}/public/scorm/6/"
-  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/ArmorQuiz.zip'), File.join(Rails.root, 'public/scorm/6/ArmorQuiz.zip'))
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/MedievalArmorQuiz.zip'), File.join(Rails.root, 'public/scorm/6/MedievalArmorQuiz.zip'))
   	Dir.mkdir "#{Rails.root}/public/scorm/7/"
-  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/Weapons_sequence.zip'), File.join(Rails.root, 'public/scorm/7/Weapons_sequence.zip'))
+  	FileUtils.cp(File.join(Rails.root, 'public/scorm_examples/WeaponsTimelineQuiz.zip'), File.join(Rails.root, 'public/scorm/7/WeaponsTimelineQuiz.zip'))
 
   	#first scorm file with its learning object
 	sf1 = ScormFile.create!  :name  => "Rabbittakeaway",
@@ -40,25 +40,25 @@ namespace :db do
 	sf4 = ScormFile.create!  :name  => "Ancient Weapons",
 	                        :description   => "Quiz about ancient weapons",
 	                        :avatar_url => "/images/AncientWarWeapons.jpg",
-						    :source =>  File.open(File.join(Rails.root, 'public/scorm/4/AncientWeaponsDaD.zip'))
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/4/AncientWeaponsQuiz.zip'))
 
 	#Weapons 2 scorm file: Drag and drop images
 	sf5 = ScormFile.create!  :name  => "Weapons Pictures",
 	                        :description   => "Drag and Drop Quiz with weapons pictures",
 	                        :avatar_url => "/images/chuKoNu.jpg",
-						    :source =>  File.open(File.join(Rails.root, 'public/scorm/5/QuizWeaponsImage.zip'))
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/5/WeaponsPicturesQuiz.zip'))
 
 	#Weapons 3 scorm file: Armor hotspot
 	sf6 = ScormFile.create!  :name  => "Medieval Armor",
 	                        :description   => "Hotspot Quiz with a medieval armor",
 	                        :avatar_url => "/images/medievalArmor.jpg",
-						    :source =>  File.open(File.join(Rails.root, 'public/scorm/6/ArmorQuiz.zip'))
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/6/MedievalArmorQuiz.zip'))
 
 	#Weapons 4 scorm file: Sequence Quiz
 	sf7 = ScormFile.create!  :name  => "Weapons Timeline",
 	                        :description   => "Weapons Timeline Quiz",
 	                        :avatar_url => "/images/weaponsTimeline.jpg",
-						    :source =>  File.open(File.join(Rails.root, 'public/scorm/7/Weapons_sequence.zip'))
+						    :source =>  File.open(File.join(Rails.root, 'public/scorm/7/WeaponsTimelineQuiz.zip'))
 
 	#now three game templates
 	oArena = GameTemplate.create! 	:name=>"Onslaught Arena", 
