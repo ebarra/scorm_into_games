@@ -89,6 +89,15 @@ namespace :db do
 	EventMapping.create! :game_id => oArenaInstance.id, :game_template_event_id => oArenaEvent1.id, :lo_id => -2 #-2 is the convention for random
 
 
+	#oArena without wildcard LO
+	oArenaInstance2 = Game.create! :name=>"Medieval Monsters", :description=>"Onslaught Arena instance example built without using LO wildcards", :avatar_url=>"/images/gameInstance_OnslaughtArena.jpg", :game_template_id=>oArena.id
+
+	#Event mapping for the oArena game
+	(sf4.ids+sf5.ids+sf6.ids+sf7.ids).uniq.each do |lo_id|
+		EventMapping.create! :game_id => oArenaInstance2.id, :game_template_event_id => oArenaEvent1.id, :lo_id => lo_id
+	end
+
+
 	#sokoban
 	sokobanInstance = Game.create! :name=>"Sokoban Example", :description=>"Sokoban instance example", :avatar_url=>"/images/devilAvatar.gif", :game_template_id=>sokoban.id
 	
@@ -100,9 +109,9 @@ namespace :db do
 
 
 	#sokoban with SCOs
-	sokobanInstance = Game.create! :name=>"Sokoban SCO", :description=>"Sokoban instance example with SCOs", :avatar_url=>"/images/scorm_logo.jpg", :game_template_id=>sokoban.id
+	sokobanInstance2 = Game.create! :name=>"Sokoban SCO", :description=>"Sokoban instance example with SCOs", :avatar_url=>"/images/scorm_logo.jpg", :game_template_id=>sokoban.id
 	#Event mapping for the sokoban game
-	EventMapping.create! :game_id => sokobanInstance.id, :game_template_event_id => sokobanEvent1.id, :lo_id => sf1.los.first.id
+	EventMapping.create! :game_id => sokobanInstance2.id, :game_template_event_id => sokobanEvent1.id, :lo_id => sf1.los.first.id
 
 	puts "Populate finish"
   end

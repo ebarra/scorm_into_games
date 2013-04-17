@@ -409,7 +409,9 @@ SGAME = (function(undefined){
 
 		var _changeColor = function(color){
 			var semaphore = document.getElementById("semaphore");
-			semaphore.src = _getImageForColor(color);
+			if(semaphore){
+				semaphore.src = _getImageForColor(color);
+			}
 		}
 
 		var _getImageForColor = function(color){
@@ -441,8 +443,14 @@ SGAME = (function(undefined){
 
 		var _blink = function(color,duration){
 			var semaphore = document.getElementById("semaphore");
+			if(!semaphore){
+				return;
+			}
 			var coin = false;
 			var timer = setInterval(function(){
+				if(!semaphore){
+					return;
+				}
 				if(coin){
 					semaphore.src = _getImageForColor(null);
 					coin = false;
@@ -477,7 +485,7 @@ SGAME = (function(undefined){
 	//vars
 	var _settings;
 	var _event_mapping = {};
-	var _los = [];
+	var _los;
 	var _togglePauseFunction = undefined;
 
 
@@ -514,15 +522,24 @@ SGAME = (function(undefined){
 		_settings = settings;
 
 		if(settings.lo_list){
-			_los = settings.lo_list;
+			if(!_los){
+				_los = [];
+			}
+			for(var i=0; i<settings.lo_list.length;i++){
+				_los.push({id: settings.lo_list[i], marked: false});
+			}
 		} else {
 			_los = [null];
 		}
 
 		if(settings.event_mapping){
 			for(var i=0;i<settings.event_mapping.length;i++){
-				_event_mapping[settings.event_mapping[i].event_id] = {};
-				_event_mapping[settings.event_mapping[i].event_id].los = settings.event_mapping[i].los_id;
+				var eMapping = settings.event_mapping[i];
+				_event_mapping[eMapping.event_id] = {};
+				_event_mapping[eMapping.event_id].los = [];
+				for(var j=0; j<eMapping.los_id.length; j++){
+					_event_mapping[eMapping.event_id].los.push({id: eMapping.los_id[j], marked: false});
+				}
 			}
 		}
 	}
@@ -530,15 +547,33 @@ SGAME = (function(undefined){
 	var triggerLO = function(event_id,callback){
 		var loId;
 		var los_candidate = _event_mapping[event_id].los;
+
 		if(los_candidate){
-			if(los_candidate.indexOf("*") != -1){
-				loId = _randomChoice(_los);
+			if(_containWildcard(los_candidate)){
+				var rRobinResult = _roundRobinChoice(_los);
+				_los = rRobinResult.los;
 			} else {
-				loId = _randomChoice(los_candidate);
+				var rRobinResult = _roundRobinChoice(los_candidate);
+				_event_mapping[event_id].los = rRobinResult.los;
 			}
+			loId = rRobinResult.lo.id;
 			_renderLO(loId,callback);
 		}
 	};
+
+	/*
+	 * Return true if an LOs array contain the special id '*'
+	 * In that case any LO of the game can be showed
+	 */
+	var _containWildcard = function(los_array){
+		var wildcard = false;
+		for(var i=0; i<los_array.length; i++){
+			if(los_array[i].id==="*"){
+				wildcard = true;
+			}
+		}
+		return wildcard;
+	}
 
 
 	/*
@@ -615,6 +650,30 @@ SGAME = (function(undefined){
 			_togglePause();
 			callback(true,null);
 		});
+	}
+
+	var _roundRobinChoice = function(los){
+		var selectedLO;
+		var purge_los = [];
+
+		for(var i=0; i<los.length; i++){
+			if(los[i].marked === false){
+				purge_los.push(los[i]);
+			}
+		}
+
+		if(purge_los.length > 0){
+			selectedLO = _randomChoice(purge_los);
+		} else {
+			//All LOs marked, reset
+			for(var i=0; i<los.length; i++){
+				los[i].marked = false;
+			}
+			selectedLO = _randomChoice(los);
+		}
+
+		los[los.indexOf(selectedLO)].marked = true;
+		return {lo: selectedLO, los: los};
 	}
 
 	var _randomChoice = function(box){
