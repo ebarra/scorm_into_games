@@ -76,6 +76,7 @@ namespace :db do
 	#Now the events of the templates
 	oArenaEvent1 = GameTemplateEvent.create! :name=>"Extra weapon", :description=>"Event triggered when the player achieved a new weapon", :event_type=>"extra_weapon", :game_template_id=>oArena.id, :id_in_game=>1
 	sokobanEvent1 = GameTemplateEvent.create! :name=>"Extra live", :description=>"Event triggered when the devil catches the player", :event_type=>"extra_life", :game_template_id=>sokoban.id, :id_in_game=>1
+	nParkEvent1 = GameTemplateEvent.create! :name=>"Gardener Event", :description=>"Event triggered when the player talks to the gardener", :event_type=>"blocker", :game_template_id=>nPark.id, :id_in_game=>1
 
 	#Now the games
 
@@ -112,6 +113,14 @@ namespace :db do
 	sokobanInstance2 = Game.create! :name=>"Sokoban SCO", :description=>"Sokoban instance example with SCOs", :avatar_url=>"/images/scorm_logo.jpg", :game_template_id=>sokoban.id
 	#Event mapping for the sokoban game
 	EventMapping.create! :game_id => sokobanInstance2.id, :game_template_event_id => sokobanEvent1.id, :lo_id => sf1.los.first.id
+
+	#Natural Park example
+	nParkInstance = Game.create! :name=>"Natural Park", :description=>"Natural Park Instance", :avatar_url=>"/images/game_dpark.png", :game_template_id=>nPark.id
+	#Event mapping for the nPark game
+
+	(sf2.ids).uniq.each do |lo_id|
+		EventMapping.create! :game_id => nParkInstance.id, :game_template_event_id => nParkEvent1.id, :lo_id => lo_id
+	end	
 
 	puts "Populate finish"
   end
