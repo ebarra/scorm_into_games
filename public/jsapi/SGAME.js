@@ -325,6 +325,8 @@ SGAME = (function(undefined){
 		 * Stop and get report
 		 */
 		var stop = function(){
+			semaphore.stop();
+
 			if(!_currentIframe){
 				return null;
 			}
@@ -397,9 +399,14 @@ SGAME = (function(undefined){
 	//////////
 	var semaphore = (function(undefined){
 
+		var changeColorTimer;
+		var startBlinkTimer;
+		var blinkTimer;
+		var stopBlinkTimer;
+
 		var changeColor = function(color,delay){
 			if(delay){
-				setTimeout(function(){
+				changeColorTimer = setTimeout(function(){
 					_changeColor(color);
 				},delay*1000);
 			} else {
@@ -433,7 +440,7 @@ SGAME = (function(undefined){
 
 		var setUpBlink = function(color,duration,delay){
 			if(delay){
-				setTimeout(function(){
+				startBlinkTimer = setTimeout(function(){
 					_blink(color,duration);
 				},delay*1000);
 			} else {
@@ -447,7 +454,7 @@ SGAME = (function(undefined){
 				return;
 			}
 			var coin = false;
-			var timer = setInterval(function(){
+			blinkTimer = setInterval(function(){
 				if(!semaphore){
 					return;
 				}
@@ -459,15 +466,31 @@ SGAME = (function(undefined){
 					coin = true;
 				}
 			},500);
-			setTimeout(function(){
-				clearTimeout(timer);
+			stopBlinkTimer = setTimeout(function(){
+				clearTimeout(blinkTimer);
 			},duration*1000);
+		}
+
+		var stop = function(){
+			if(changeColorTimer){
+				clearTimeout(changeColorTimer);
+			}
+			if(startBlinkTimer){
+				clearTimeout(startBlinkTimer);
+			}
+			if(blinkTimer){
+				clearTimeout(blinkTimer);
+			}
+			if(stopBlinkTimer){
+				clearTimeout(stopBlinkTimer);
+			}
 		}
 
 
 		return {
 			changeColor	: changeColor,
-			setUpBlink	: setUpBlink
+			setUpBlink	: setUpBlink,
+			stop 		: stop
 		};
 
 	}) ();
